@@ -1,0 +1,32 @@
+[
+{
+  "directory": "D:/project/c/p-c/build/src",
+  "command": "D:\\Users\\code-use\\c-or-c++\\mingw64\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\Maze.cpp.obj -c D:\\project\\c\\p-c\\src\\Maze.cpp",
+  "file": "D:/project/c/p-c/src/Maze.cpp",
+  "output": "src/CMakeFiles/main.dir/Maze.cpp.obj"
+},
+{
+  "directory": "D:/project/c/p-c/build/src",
+  "command": "D:\\Users\\code-use\\c-or-c++\\mingw64\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\funtion.cpp.obj -c D:\\project\\c\\p-c\\src\\funtion.cpp",
+  "file": "D:/project/c/p-c/src/funtion.cpp",
+  "output": "src/CMakeFiles/main.dir/funtion.cpp.obj"
+},
+{
+  "directory": "D:/project/c/p-c/build/src",
+  "command": "D:\\Users\\code-use\\c-or-c++\\mingw64\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\project\\c\\p-c\\src\\main.cpp",
+  "file": "D:/project/c/p-c/src/main.cpp",
+  "output": "src/CMakeFiles/main.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/project/c/p-c/build/src",
+  "command": "D:\\Users\\code-use\\c-or-c++\\mingw64\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\tree.cpp.obj -c D:\\project\\c\\p-c\\src\\tree.cpp",
+  "file": "D:/project/c/p-c/src/tree.cpp",
+  "output": "src/CMakeFiles/main.dir/tree.cpp.obj"
+},
+{
+  "directory": "D:/project/c/p-c/build/src",
+  "command": "D:\\Users\\code-use\\c-or-c++\\mingw64\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\txt.cpp.obj -c D:\\project\\c\\p-c\\src\\txt.cpp",
+  "file": "D:/project/c/p-c/src/txt.cpp",
+  "output": "src/CMakeFiles/main.dir/txt.cpp.obj"
+}
+]
