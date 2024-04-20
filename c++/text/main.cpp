@@ -38,7 +38,6 @@ int main(){
     for(i=a;i<=b;i++)
        if(fun(i))
           fun1(i);
-          return 0;
 }       
 
 
