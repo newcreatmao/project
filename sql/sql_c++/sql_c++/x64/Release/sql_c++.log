@@ -1,6 +1,0 @@
-﻿  main.cpp
-D:\project\sql\sql_c++\main.cpp(2,9): error C1083: 无法打开包括文件: “mysql.h”: No such file or directory
-  user.cpp
-D:\project\sql\sql_c++\user.hpp(2,9): error C1083: 无法打开包括文件: “mysql.h”: No such file or directory
-  (编译源文件“user.cpp”)
-  
