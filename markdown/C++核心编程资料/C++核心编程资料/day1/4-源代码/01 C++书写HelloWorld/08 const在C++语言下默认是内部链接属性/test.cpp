@@ -1,0 +1,1 @@
+extern const int m_A = 10000; //C++下必须手动添加 extern关键字 ，提高作用域

@@ -1,0 +1,4 @@
+﻿  10 成员函数作为友元函数.cpp
+e:\0128\sendtostudent\day14_c++\code\01 静态成员\10 成员函数作为友元函数\10 成员函数作为友元函数.cpp(47): error C2248: “Building::m_BedRoom”: 无法访问 private 成员(在“Building”类中声明)
+          e:\0128\sendtostudent\day14_c++\code\01 静态成员\10 成员函数作为友元函数\10 成员函数作为友元函数.cpp(28) : 参见“Building::m_BedRoom”的声明
+          e:\0128\sendtostudent\day14_c++\code\01 静态成员\10 成员函数作为友元函数\10 成员函数作为友元函数.cpp(18) : 参见“Building”的声明

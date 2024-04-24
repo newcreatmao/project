@@ -1,0 +1,3 @@
+﻿  09 继承中的同名静态成员处理.cpp
+e:\0128\sendtostudent\day16_c++\code\01 关系运算符重载\09 继承中的同名静态成员处理\09 继承中的同名静态成员处理.cpp(41): warning C4101: “s”: 未引用的局部变量
+  09 继承中的同名静态成员处理.vcxproj -> E:\0128\sendToStudent\Day16_C++\Code\01 关系运算符重载\Debug\09 继承中的同名静态成员处理.exe

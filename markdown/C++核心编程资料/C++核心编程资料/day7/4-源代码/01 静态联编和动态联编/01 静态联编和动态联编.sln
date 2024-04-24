@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01 静态联编和动态联编", "01 静态联编和动态联编\01 静态联编和动态联编.vcxproj", "{1890B644-5FB3-4CC1-B3A2-E0236A6DC941}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02 多态案例-计算器", "02 多态案例-计算器\02 多态案例-计算器.vcxproj", "{B0660392-F213-466E-8A99-423CDCA55EBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03 虚析构和纯虚析构", "03 虚析构和纯虚析构\03 虚析构和纯虚析构.vcxproj", "{22C03BC5-F554-4BC9-A0F1-13D80FC631D0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 多态案例二-电脑组装", "04 多态案例二-电脑组装\04 多态案例二-电脑组装.vcxproj", "{8E7F4AC8-E65D-465F-A2F2-6E4635C812CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1890B644-5FB3-4CC1-B3A2-E0236A6DC941}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1890B644-5FB3-4CC1-B3A2-E0236A6DC941}.Debug|Win32.Build.0 = Debug|Win32
+		{1890B644-5FB3-4CC1-B3A2-E0236A6DC941}.Release|Win32.ActiveCfg = Release|Win32
+		{1890B644-5FB3-4CC1-B3A2-E0236A6DC941}.Release|Win32.Build.0 = Release|Win32
+		{B0660392-F213-466E-8A99-423CDCA55EBA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B0660392-F213-466E-8A99-423CDCA55EBA}.Debug|Win32.Build.0 = Debug|Win32
+		{B0660392-F213-466E-8A99-423CDCA55EBA}.Release|Win32.ActiveCfg = Release|Win32
+		{B0660392-F213-466E-8A99-423CDCA55EBA}.Release|Win32.Build.0 = Release|Win32
+		{22C03BC5-F554-4BC9-A0F1-13D80FC631D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{22C03BC5-F554-4BC9-A0F1-13D80FC631D0}.Debug|Win32.Build.0 = Debug|Win32
+		{22C03BC5-F554-4BC9-A0F1-13D80FC631D0}.Release|Win32.ActiveCfg = Release|Win32
+		{22C03BC5-F554-4BC9-A0F1-13D80FC631D0}.Release|Win32.Build.0 = Release|Win32
+		{8E7F4AC8-E65D-465F-A2F2-6E4635C812CC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E7F4AC8-E65D-465F-A2F2-6E4635C812CC}.Debug|Win32.Build.0 = Debug|Win32
+		{8E7F4AC8-E65D-465F-A2F2-6E4635C812CC}.Release|Win32.ActiveCfg = Release|Win32
+		{8E7F4AC8-E65D-465F-A2F2-6E4635C812CC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

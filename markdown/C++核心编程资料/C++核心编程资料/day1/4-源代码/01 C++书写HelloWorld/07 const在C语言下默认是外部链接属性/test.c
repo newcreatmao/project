@@ -1,0 +1,1 @@
+const int m_a = 10; //C语言下的全局变量 默认前面加了关键字 extern

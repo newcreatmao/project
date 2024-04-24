@@ -1,0 +1,4 @@
+﻿  test.c
+  07 const在C语言下默认是外部链接属性.c
+e:\0128\sendtostudent\day11_c++\code\01 c++书写helloworld\07 const在c语言下默认是外部链接属性\07 const在c语言下默认是外部链接属性.c(9): error C2065: “m_a”: 未声明的标识符
+  正在生成代码...

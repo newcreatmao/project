@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01 函数模板基本语法", "01 函数模板基本语法\01 函数模板基本语法.vcxproj", "{02301E76-5B1F-4328-93AC-2273EDE6ECA3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02 函数模板实现int和char的数组排序", "02 函数模板实现int和char的数组排序\02 函数模板实现int和char的数组排序.vcxproj", "{E2C1D3A8-29EA-4FAE-9911-3C5BC83A846C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03 普通函数和函数模板的区别以及调用规则", "03 普通函数和函数模板的区别以及调用规则\03 普通函数和函数模板的区别以及调用规则.vcxproj", "{5196B70F-530F-45CB-96E8-836E81611F35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 模板的局限性的解决-具体化", "04 模板的局限性的解决-具体化\04 模板的局限性的解决-具体化.vcxproj", "{CBB584B6-D987-4B8D-B758-B675F3ACFE35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05 类模板基本语法", "05 类模板基本语法\05 类模板基本语法.vcxproj", "{F6A02659-5B38-40F6-B917-C5C044F1A65D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06 类模板中成员函数创建时机", "06 类模板中成员函数创建时机\06 类模板中成员函数创建时机.vcxproj", "{4BFE04A4-F581-4236-B99D-F5E6FDE87A92}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07 类模板作为函数参数", "07 类模板作为函数参数\07 类模板作为函数参数.vcxproj", "{BC8CD6E5-0640-4935-9BD2-AB40CFBA4DD1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08 类模板碰到继承的问题以及解决", "08 类模板碰到继承的问题以及解决\08 类模板碰到继承的问题以及解决.vcxproj", "{A566F997-15B1-456C-97EF-85B9B1E7C67B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09 类模板类外实现成员函数", "09 类模板类外实现成员函数\09 类模板类外实现成员函数.vcxproj", "{72E23F8A-7942-4BCA-B319-A8D31EE1810D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10 类模板的分文件编写问题以及解决", "10 类模板的分文件编写问题以及解决\10 类模板的分文件编写问题以及解决.vcxproj", "{4BB0DED0-7B1A-4FB7-8310-97621265A0CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11 类模板碰到友元函数", "11 类模板碰到友元函数\11 类模板碰到友元函数.vcxproj", "{437F0488-DF00-442C-996C-EB9AF88EDF07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12 类模板案例-数组类封装", "12 类模板案例-数组类封装\12 类模板案例-数组类封装.vcxproj", "{9DB0DF17-E280-4804-9A1B-C284D3FDA800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02301E76-5B1F-4328-93AC-2273EDE6ECA3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02301E76-5B1F-4328-93AC-2273EDE6ECA3}.Debug|Win32.Build.0 = Debug|Win32
+		{02301E76-5B1F-4328-93AC-2273EDE6ECA3}.Release|Win32.ActiveCfg = Release|Win32
+		{02301E76-5B1F-4328-93AC-2273EDE6ECA3}.Release|Win32.Build.0 = Release|Win32
+		{E2C1D3A8-29EA-4FAE-9911-3C5BC83A846C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2C1D3A8-29EA-4FAE-9911-3C5BC83A846C}.Debug|Win32.Build.0 = Debug|Win32
+		{E2C1D3A8-29EA-4FAE-9911-3C5BC83A846C}.Release|Win32.ActiveCfg = Release|Win32
+		{E2C1D3A8-29EA-4FAE-9911-3C5BC83A846C}.Release|Win32.Build.0 = Release|Win32
+		{5196B70F-530F-45CB-96E8-836E81611F35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5196B70F-530F-45CB-96E8-836E81611F35}.Debug|Win32.Build.0 = Debug|Win32
+		{5196B70F-530F-45CB-96E8-836E81611F35}.Release|Win32.ActiveCfg = Release|Win32
+		{5196B70F-530F-45CB-96E8-836E81611F35}.Release|Win32.Build.0 = Release|Win32
+		{CBB584B6-D987-4B8D-B758-B675F3ACFE35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBB584B6-D987-4B8D-B758-B675F3ACFE35}.Debug|Win32.Build.0 = Debug|Win32
+		{CBB584B6-D987-4B8D-B758-B675F3ACFE35}.Release|Win32.ActiveCfg = Release|Win32
+		{CBB584B6-D987-4B8D-B758-B675F3ACFE35}.Release|Win32.Build.0 = Release|Win32
+		{F6A02659-5B38-40F6-B917-C5C044F1A65D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F6A02659-5B38-40F6-B917-C5C044F1A65D}.Debug|Win32.Build.0 = Debug|Win32
+		{F6A02659-5B38-40F6-B917-C5C044F1A65D}.Release|Win32.ActiveCfg = Release|Win32
+		{F6A02659-5B38-40F6-B917-C5C044F1A65D}.Release|Win32.Build.0 = Release|Win32
+		{4BFE04A4-F581-4236-B99D-F5E6FDE87A92}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BFE04A4-F581-4236-B99D-F5E6FDE87A92}.Debug|Win32.Build.0 = Debug|Win32
+		{4BFE04A4-F581-4236-B99D-F5E6FDE87A92}.Release|Win32.ActiveCfg = Release|Win32
+		{4BFE04A4-F581-4236-B99D-F5E6FDE87A92}.Release|Win32.Build.0 = Release|Win32
+		{BC8CD6E5-0640-4935-9BD2-AB40CFBA4DD1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC8CD6E5-0640-4935-9BD2-AB40CFBA4DD1}.Debug|Win32.Build.0 = Debug|Win32
+		{BC8CD6E5-0640-4935-9BD2-AB40CFBA4DD1}.Release|Win32.ActiveCfg = Release|Win32
+		{BC8CD6E5-0640-4935-9BD2-AB40CFBA4DD1}.Release|Win32.Build.0 = Release|Win32
+		{A566F997-15B1-456C-97EF-85B9B1E7C67B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A566F997-15B1-456C-97EF-85B9B1E7C67B}.Debug|Win32.Build.0 = Debug|Win32
+		{A566F997-15B1-456C-97EF-85B9B1E7C67B}.Release|Win32.ActiveCfg = Release|Win32
+		{A566F997-15B1-456C-97EF-85B9B1E7C67B}.Release|Win32.Build.0 = Release|Win32
+		{72E23F8A-7942-4BCA-B319-A8D31EE1810D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{72E23F8A-7942-4BCA-B319-A8D31EE1810D}.Debug|Win32.Build.0 = Debug|Win32
+		{72E23F8A-7942-4BCA-B319-A8D31EE1810D}.Release|Win32.ActiveCfg = Release|Win32
+		{72E23F8A-7942-4BCA-B319-A8D31EE1810D}.Release|Win32.Build.0 = Release|Win32
+		{4BB0DED0-7B1A-4FB7-8310-97621265A0CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BB0DED0-7B1A-4FB7-8310-97621265A0CF}.Debug|Win32.Build.0 = Debug|Win32
+		{4BB0DED0-7B1A-4FB7-8310-97621265A0CF}.Release|Win32.ActiveCfg = Release|Win32
+		{4BB0DED0-7B1A-4FB7-8310-97621265A0CF}.Release|Win32.Build.0 = Release|Win32
+		{437F0488-DF00-442C-996C-EB9AF88EDF07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{437F0488-DF00-442C-996C-EB9AF88EDF07}.Debug|Win32.Build.0 = Debug|Win32
+		{437F0488-DF00-442C-996C-EB9AF88EDF07}.Release|Win32.ActiveCfg = Release|Win32
+		{437F0488-DF00-442C-996C-EB9AF88EDF07}.Release|Win32.Build.0 = Release|Win32
+		{9DB0DF17-E280-4804-9A1B-C284D3FDA800}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9DB0DF17-E280-4804-9A1B-C284D3FDA800}.Debug|Win32.Build.0 = Debug|Win32
+		{9DB0DF17-E280-4804-9A1B-C284D3FDA800}.Release|Win32.ActiveCfg = Release|Win32
+		{9DB0DF17-E280-4804-9A1B-C284D3FDA800}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

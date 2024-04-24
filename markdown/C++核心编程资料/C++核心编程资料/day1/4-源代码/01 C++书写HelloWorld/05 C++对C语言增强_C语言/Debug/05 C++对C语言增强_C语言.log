@@ -1,0 +1,4 @@
+﻿  05 C++对C语言增强_C语言.c
+e:\0128\sendtostudent\day11_c++\code\01 c++书写helloworld\05 c++对c语言增强_c语言\05 c++对c语言增强_c语言.c(72): warning C4090: “初始化”: 不同的“const”限定符
+e:\0128\sendtostudent\day11_c++\code\01 c++书写helloworld\05 c++对c语言增强_c语言\05 c++对c语言增强_c语言.c(14): warning C4716: “getRectS”: 必须返回一个值
+  05 C++对C语言增强_C语言.vcxproj -> E:\0128\sendToStudent\Day11_C++\Code\01 C++书写HelloWorld\Debug\05 C++对C语言增强_C语言.exe

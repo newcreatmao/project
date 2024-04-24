@@ -1,0 +1,4 @@
+﻿  06 C++对C语言增强_C++语言.cpp
+e:\0128\sendtostudent\day11_c++\code\01 c++书写helloworld\07 c++对c语言增强_c++语言\06 c++对c语言增强_c++语言.cpp(50): warning C4305: “=”: 从“int”到“bool”截断
+e:\0128\sendtostudent\day11_c++\code\01 c++书写helloworld\07 c++对c语言增强_c++语言\06 c++对c语言增强_c++语言.cpp(84): warning C4101: “arr”: 未引用的局部变量
+  07 C++对C语言增强_C++语言.vcxproj -> E:\0128\sendToStudent\Day11_C++\Code\01 C++书写HelloWorld\Debug\06 C++对C语言增强_C++语言.exe
