@@ -4,29 +4,29 @@
 #include"Funtion.hpp"
 #include<time.h>
 
-// int main(){
-//     clock_t start,end;
-//     start=clock();
-//     float Total_time;
-//     int a[9]={150,42,54,42,342,65,45,34,21};
-//     printf("%d\n",Length(a));
-//     MERGE_sort(a,0,7);
-//     Print_data(a,Length(a));
-//     end=clock();
-//     Total_time = (double)(end - start) / CLOCKS_PER_SEC; //单位换算成秒
-// 	printf("\n%f seconds\n", Total_time);
-//     return 0;
-// }
-
 int main(){
-    Stack*top=(Node*)malloc(sizeof(Node));
-    top->data=&swap;
-    top->next=NULL;
-    int a=11,b=22;
-    printf("%d %d\n",a,b);
-    top->data(&a,&b);
-    printf("%d %d\n",a,b);
+    clock_t start,end;
+    start=clock();
+    float Total_time;
+    int a[9]={150,42,54,42,342,65,45,34,21};
+    printf("%d\n",Length(a));
+    MERGE_sort(a,0,7);
+    Print_data(a,Length(a));
+    end=clock();
+    Total_time = (double)(end - start) / CLOCKS_PER_SEC; //单位换算成秒
+	printf("\n%f seconds\n", Total_time);
+    return 0;
 }
+
+// int main(){
+//     Stack*top=(Node*)malloc(sizeof(Node));
+//     top->data=&swap;
+//     top->next=NULL;
+//     int a=11,b=22;
+//     printf("%d %d\n",a,b);
+//     top->data(&a,&b);
+//     printf("%d %d\n",a,b);
+// }
 
 // float ADD_float(float a,float b){
 //     return a+b;
