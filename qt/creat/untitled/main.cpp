@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "page_login.h""
 #include<QSqlDatabase>
 #include <QApplication>
 #include <qdebug.h>
@@ -24,6 +25,5 @@ int main(int argc, char *argv[])
 
 
     MainWindow w;
-    w.show();
     return a.exec();
 }

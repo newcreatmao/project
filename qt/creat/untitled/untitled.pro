@@ -10,15 +10,21 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    page_login.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    page_login.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    page_login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
