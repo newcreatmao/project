@@ -13,7 +13,7 @@ int main(){
     MERGE_sort(a,0,7);
     Print_data(a,Length(a));
     end=clock();
-    Total_time = (double)(end - start) / CLOCKS_PER_SEC; //µ•ŒªªªÀ„≥…√Î
+    Total_time = (double)(end - start) / CLOCKS_PER_SEC; 
 	printf("\n%f seconds\n", Total_time);
     return 0;
 }
