@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    page_login.cpp
+    page_login.cpp \
+    stu_sql.cpp
 
 HEADERS += \
     mainwindow.h \
-    page_login.h
+    page_login.h \
+    stu_sql.h
 
 FORMS += \
     mainwindow.ui \
