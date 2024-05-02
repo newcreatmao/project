@@ -7,22 +7,22 @@
 #include "malloc.h"  
 #include "MMC_SD.h"  
 #include "string.h"
-//¶ÁÈ¡SD¿¨µÄÖ¸¶¨ÉÈÇøµÄÄÚÈİ£¬²¢Í¨¹ı´®¿Ú1Êä³ö
-//sec£ºÉÈÇøÎïÀíµØÖ·±àºÅ
+//è¯»å–SDå¡çš„æŒ‡å®šæ‰‡åŒºçš„å†…å®¹ï¼Œå¹¶é€šè¿‡ä¸²å£1è¾“å‡º
+//secï¼šæ‰‡åŒºç‰©ç†åœ°å€ç¼–å·
 void SD_Read_Sectorx(u32 sec)
 {
 	u8 *buf;
 	u16 i;
-	buf=mymalloc(512);				//ÉêÇëÄÚ´æ
-	if(SD_ReadDisk(buf,sec,1)==0)	//¶ÁÈ¡0ÉÈÇøµÄÄÚÈİ
+	buf=mymalloc(512);				//ç”³è¯·å†…å­˜
+	if(SD_ReadDisk(buf,sec,1)==0)	//è¯»å–0æ‰‡åŒºçš„å†…å®¹
 	{	
 		LCD_ShowString(60,190,200,16,16,"USART1 Sending Data...");
 		printf("SECTOR 0 DATA:\r\n");
-		for(i=0;i<512;i++)printf("%x ",buf[i]);//´òÓ¡secÉÈÇøÊı¾İ    	   
+		for(i=0;i<512;i++)printf("%x ",buf[i]);//æ‰“å°secæ‰‡åŒºæ•°æ®    	   
 		printf("\r\nDATA ENDED\r\n");
 		LCD_ShowString(60,190,200,16,16,"USART1 Send Data Over!");
 	}
-	myfree(buf);//ÊÍ·ÅÄÚ´æ	
+	myfree(buf);//é‡Šæ”¾å†…å­˜	
 }
 
  int main(void)
@@ -30,35 +30,35 @@ void SD_Read_Sectorx(u32 sec)
 	u8 key;		 
 	u32 sd_size;
 	u8 t=0;	 
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);// ÉèÖÃÖĞ¶ÏÓÅÏÈ¼¶·Ö×é2
-	delay_init();	    	 //ÑÓÊ±º¯Êı³õÊ¼»¯	  
-	uart_init(9600);	 	//´®¿Ú³õÊ¼»¯Îª9600
-	LED_Init();		  		//³õÊ¼»¯ÓëLEDÁ¬½ÓµÄÓ²¼ş½Ó¿Ú
-	LCD_Init();			   	//³õÊ¼»¯LCD	
- 	KEY_Init();				//°´¼ü³õÊ¼»¯  
- 	mem_init();				//³õÊ¼»¯ÄÚ´æ³Ø	
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);// è®¾ç½®ä¸­æ–­ä¼˜å…ˆçº§åˆ†ç»„2
+	delay_init();	    	 //å»¶æ—¶å‡½æ•°åˆå§‹åŒ–	  
+	uart_init(9600);	 	//ä¸²å£åˆå§‹åŒ–ä¸º9600
+	LED_Init();		  		//åˆå§‹åŒ–ä¸LEDè¿æ¥çš„ç¡¬ä»¶æ¥å£
+	LCD_Init();			   	//åˆå§‹åŒ–LCD	
+ 	KEY_Init();				//æŒ‰é”®åˆå§‹åŒ–  
+ 	mem_init();				//åˆå§‹åŒ–å†…å­˜æ± 	
 	Use_lock_init();	 
- 	POINT_COLOR=RED;//ÉèÖÃ×ÖÌåÎªºìÉ« 
+ 	POINT_COLOR=RED;//è®¾ç½®å­—ä½“ä¸ºçº¢è‰² 
 	LCD_ShowString(60,110,200,16,16,"2024/3/08");  
 	LCD_ShowString(60,130,200,16,16,"KEY0:Read Sector 0");	   
- 	while(SD_Initialize())//¼ì²â²»µ½SD¿¨
+ 	while(SD_Initialize())//æ£€æµ‹ä¸åˆ°SDå¡
 	{
 		LCD_ShowString(60,150,200,16,16,"SD Card Error!");
 		delay_ms(500);					
 		LCD_ShowString(60,150,200,16,16,"Please Check! ");
 		delay_ms(500);
-		LED0=!LED0;//DS0ÉÁË¸
+		LED0=!LED0;//DS0é—ªçƒ
 	}
- 	POINT_COLOR=BLUE;//ÉèÖÃ×ÖÌåÎªÀ¶É« 
-	//¼ì²âSD¿¨³É¹¦ 											    
+ 	POINT_COLOR=BLUE;//è®¾ç½®å­—ä½“ä¸ºè“è‰² 
+	//æ£€æµ‹SDå¡æˆåŠŸ 											    
 	LCD_ShowString(60,150,200,16,16,"SD Card OK    ");
 	LCD_ShowString(60,170,200,16,16,"SD Card Size:     MB");
-	sd_size=SD_GetSectorCount();//µÃµ½ÉÈÇøÊı
-	LCD_ShowNum(164,170,sd_size>>11,5,16);//ÏÔÊ¾SD¿¨ÈİÁ¿
+	sd_size=SD_GetSectorCount();//å¾—åˆ°æ‰‡åŒºæ•°
+	LCD_ShowNum(164,170,sd_size>>11,5,16);//æ˜¾ç¤ºSDå¡å®¹é‡
 	while(1)
 	{
 		key=KEY_Scan(0);
-		if(key==KEY1_PRES)SD_Read_Sectorx(0);//KEY0°´,¶ÁÈ¡SD¿¨ÉÈÇø0µÄÄÚÈİ
+		if(key==KEY1_PRES)SD_Read_Sectorx(0);//KEY0æŒ‰,è¯»å–SDå¡æ‰‡åŒº0çš„å†…å®¹
 		t++;
 		if(Serial_RxFlag==1){
 			LCD_ShowString(60,210,200,16,16,Serial_RxPacket);
@@ -106,6 +106,6 @@ void SD_Read_Sectorx(u32 sec)
 		}
 	}    	   
 }
-
+//text
 
 
