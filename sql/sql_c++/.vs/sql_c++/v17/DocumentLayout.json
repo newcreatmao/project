@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\project\\sql\\sql_c\u002B\u002B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|D:\\project\\sql\\sql_c\u002B\u002B\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|D:\\project\\sql\\sql_c\u002B\u002B\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|solutionrelative:user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|D:\\project\\sql\\sql_c\u002B\u002B\\user.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5618F5D1-75F2-4BB7-81EE-24032EDB9C84}|sql_c\u002B\u002B.vcxproj|solutionrelative:user.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -22,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedHeight": 276,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "user.cpp",
-              "DocumentMoniker": "D:\\project\\sql\\sql_c\u002B\u002B\\user.cpp",
-              "RelativeDocumentMoniker": "user.cpp",
-              "ToolTip": "D:\\project\\sql\\sql_c\u002B\u002B\\user.cpp",
-              "RelativeToolTip": "user.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-15T09:59:02.399Z"
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\project\\sql\\sql_c\u002B\u002B\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "D:\\project\\sql\\sql_c\u002B\u002B\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-15T09:55:32.948Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },
@@ -57,7 +36,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "user.hpp",
               "DocumentMoniker": "D:\\project\\sql\\sql_c\u002B\u002B\\user.hpp",
               "RelativeDocumentMoniker": "user.hpp",
