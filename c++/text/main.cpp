@@ -76,36 +76,36 @@
 // }
 
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int main(){
-//     int n,m,l,count=0,max=0,update=0;
-//     cin>>n>>m>>l;
-//     char s[n],t[m];
-//     cin>>s;
-//     cin>>t;
-//     char p;
-//     for(int k=0;k<m;k++){
-//     p=t[k];count=1;
-//     int way[26];for(int i=0;i<26;i++){way[i]=100;}
-//     way[p-'a']=0;
-//     for(int i=1;i<n;i++){
-//         if(way[s[i]-'a']>s[i]-p){
-//            way[s[i]-'a']=s[i]-p;
-//         }
-//     }
-//     int sum=0;
-//     for(int i=0;i<m;i++){
-//         if(sum>l){break;}
-//         sum+=abs(way[t[i]-'a'])+update;
-//         update+=way[t[i]-'a'];
-//         count++;
-//     }
-//     if(count>max){max=count;}
-//     }
-//     cout<<max;
-// }
+int main(){
+    int n,m,l,count=0,max=0,update=0;
+    cin>>n>>m>>l;
+    char s[n],t[m];
+    cin>>s;
+    cin>>t;
+    char p;
+    for(int k=0;k<m;k++){
+    p=t[k];count=1;
+    int way[26];for(int i=0;i<26;i++){way[i]=100;}
+    way[p-'a']=0;
+    for(int i=1;i<n;i++){
+        if(way[s[i]-'a']>s[i]-p){
+           way[s[i]-'a']=s[i]-p;
+        }
+    }
+    int sum=0;
+    for(int i=0;i<m;i++){
+        if(sum>l){break;}
+        sum+=abs(way[t[i]-'a'])+update;
+        update+=way[t[i]-'a'];
+        count++;
+    }
+    if(count>max){max=count;}
+    }
+    cout<<max;
+}
 
 // #include<bits/stdc++.h>
 // using namespace std;
