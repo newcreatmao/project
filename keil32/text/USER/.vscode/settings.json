@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "MMC_SD.C": "cpp",
+        "usart.h": "c",
+        "sys.h": "c",
+        "ff.h": "c"
+    }
+}
