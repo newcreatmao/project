@@ -9,19 +9,19 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    page_login.cpp \
-    stu_sql.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/page_login.cpp \
+    src/stu_sql.cpp \
 
 HEADERS += \
-    mainwindow.h \
-    page_login.h \
-    stu_sql.h
+    head/mainwindow.h \
+    head/page_login.h \
+    head/stu_sql.h \
 
 FORMS += \
-    mainwindow.ui \
-    page_login.ui
+    ui/mainwindow.ui \
+    ui/page_login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -29,4 +29,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    res.qrc
+    image/res.qrc \
+
+DISTFILES += \
+    image/login.jpg \
+    image/user.jpg
