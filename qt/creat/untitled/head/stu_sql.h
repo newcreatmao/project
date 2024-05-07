@@ -4,14 +4,44 @@
 #include <QObject>
 #include <QSqlTableModel>
 
+struct StuInfo{
+    int id;
+    QString name;
+    int age;
+    int grade;
+    int uiclass;
+    quint32 studentid;
+    QString phone;
+    QString wechat;
+};
+
+struct UserInfo{
+    QString username;
+    QString password;
+    QString aut;
+};
+
 class stu_sql : public QObject
 {
     Q_OBJECT
 public:
     explicit stu_sql(QObject *parent = nullptr);
-    QSqlError addConnection(const QString &driver, const QString &dbName, const QString &host,
-                            const QString &user, const QString &passwd, int port);
+    void Init();
+    quint32 getStuCnt();
+    QList<StuInfo> getPageStu(quint32 page,quint32 uiCnt);
+    bool addStu(StuInfo info);
+    bool delStu(int id);
+    bool clearStuTable();
+    bool UpdateStuInfo(StuInfo info);
+    QList<UserInfo> getAllUser();
+    bool isExit(QString struser);
+    void changeuserAnt(QString str);
+    void AddUser(UserInfo);
+    void delUser(QString struserName);
 signals:
+
+private:
+    QSqlDatabase m_db;
 };
 
 #endif // STU_SQL_H

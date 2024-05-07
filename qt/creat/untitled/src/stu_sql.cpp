@@ -15,30 +15,110 @@
 stu_sql::stu_sql(QObject *parent)
     : QObject{parent}
 {
+
+}
+
+void stu_sql::Init()
+{
     if (QSqlDatabase::drivers().isEmpty())
         QMessageBox::information(nullptr, tr("No database drivers found"),
                                  tr("This demo requires at least one Qt database driver. "
                                     "Please check the documentation how to build the "
                                     "Qt SQL plugins."));
 
-}
-
-
-QSqlError stu_sql::addConnection(const QString &driver, const QString &dbName, const QString &host,
-                                 const QString &user, const QString &passwd, int port)
-{
-    static int cCount = 0;
-
-    QSqlError err;
-    QSqlDatabase db = QSqlDatabase::addDatabase(driver, QString("Browser%1").arg(++cCount));
-    db.setDatabaseName(dbName);
-    db.setHostName(host);
-    db.setPort(port);
-    if (!db.open(user, passwd)) {
-        err = db.lastError();
-        db = QSqlDatabase();
-        QSqlDatabase::removeDatabase(QString("Browser%1").arg(cCount));
+    m_db = QSqlDatabase::addDatabase("QMYSQL");
+    m_db.setHostName("192.168.142.131");
+    m_db.setPort(3306);
+    m_db.setDatabaseName("student");
+    m_db.setUserName("root");
+    m_db.setPassword("123456");
+    bool ok = m_db.open();
+    if (!ok) {
+        QMessageBox::warning(nullptr, tr("Unable to open database"),
+                             tr("An error occurred while "
+                                "opening the connection: %1") .arg(m_db.lastError().text()));
+        return;
     }
 
-    return err;
 }
+
+quint32 stu_sql::getStuCnt()
+{
+    QSqlQuery sql(m_db);
+    quint32 count;
+    sql.exec("select count(id) from student;");
+    while(sql.next()){
+        count=sql.value(0).toUInt();
+    }
+    return count;
+}
+
+QList<StuInfo> stu_sql::getPageStu(quint32 page, quint32 uiCnt)
+{
+    QList<StuInfo> l;
+    QSqlQuery sql(m_db);
+    QString str=QString("select * from student order by id limit %1 offset %2;")
+        .arg(uiCnt)
+        .arg(page*uiCnt);
+    sql.exec(str);
+    StuInfo info;
+    while(sql.next()){
+        info.id=sql.value(0).toUInt();
+        info.name=sql.value(1).toString();
+        info.age=sql.value(2).toUInt();
+        info.grade=sql.value(3).toUInt();
+        info.uiclass=sql.value(4).toUInt();
+        info.studentid=sql.value(5).toUInt();
+        info.phone=sql.value(6).toString();
+        info.wechat=sql.value(7).toString();
+        l.push_back(info);
+    }
+    return l;
+}
+
+bool stu_sql::addStu(StuInfo info)
+{
+    QSqlQuery sql(m_db);
+    QString strSql = QString("insert into student valuse(null,'%1',%2,%3,%4,%5,'%6','%7');")
+                         .arg(info.name)
+                         .arg(info.age)
+                         .arg(info.grade)
+                         .arg(info.uiclass)
+                         .arg(info.studentid)
+                         .arg(info.phone)
+                         .arg(info.wechat);
+    return sql.exec(strSql);
+}
+
+bool stu_sql::delStu(int id)
+{
+    QSqlQuery sql(m_db);
+    return sql.exec(QString("delete from student where id=%1;").arg(id));
+}
+
+bool stu_sql::clearStuTable()
+{
+    QSqlQuery sql(m_db);
+    return sql.exec("delete from student;");
+}
+
+bool stu_sql::UpdateStuInfo(StuInfo info)
+{
+    QSqlQuery sql(m_db);
+    QString strSql = QString("update student set name='%1',age=%2,grade=%3,class=%4,studentid=%5,phone='%6',wechat='%7' where id=%8;")
+                         .arg(info.name)
+                         .arg(info.age)
+                         .arg(info.grade)
+                         .arg(info.uiclass)
+                         .arg(info.studentid)
+                         .arg(info.phone)
+                         .arg(info.wechat)
+                         .arg(info.id);
+    bool ret= sql.exec(strSql);
+    QSqlError e =sql.lastError();
+    if(e.isValid()){
+        qDebug()<<e.text();
+    }
+    return ret;
+}
+
