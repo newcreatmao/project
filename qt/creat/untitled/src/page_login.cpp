@@ -1,4 +1,4 @@
-#include "page_login.h"
+#include "../head/page_login.h"
 #include "ui_page_login.h"
 
 page_login::page_login(QWidget *parent)

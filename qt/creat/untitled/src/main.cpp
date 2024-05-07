@@ -1,5 +1,4 @@
 #include "../head/mainwindow.h"
-#include "../head/page_login.h"
 #include<QSqlDatabase>
 #include <QApplication>
 #include <qdebug.h>
