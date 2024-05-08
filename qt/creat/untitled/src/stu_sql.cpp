@@ -39,7 +39,9 @@ void stu_sql::Init()
                                 "opening the connection: %1") .arg(m_db.lastError().text()));
         return;
     }
-
+    else{
+        QMessageBox::information(nullptr, tr("static"),tr("link success"));
+    }
 }
 
 quint32 stu_sql::getStuCnt()
@@ -120,5 +122,57 @@ bool stu_sql::UpdateStuInfo(StuInfo info)
         qDebug()<<e.text();
     }
     return ret;
+}
+
+QList<UserInfo> stu_sql::getAllUser()
+{
+    QList<UserInfo> l;
+    QSqlQuery sql(m_db);
+    sql.exec("select * from username;");
+    UserInfo info;
+    while(sql.next()){
+        info.username=sql.value(0).toString();
+        info.password=sql.value(1).toString();
+        info.aut=sql.value(2).toString();
+        l.push_back(info);
+    }
+    return l;
+}
+
+bool stu_sql::isExit(QString struser)
+{
+    QSqlQuery sql(m_db);
+    return sql.exec(QString("select * from username where username=%1;").arg(struser));
+}
+
+bool stu_sql::changeuserAnt(UserInfo info)
+{
+    QSqlQuery sql(m_db);
+    QString strSql = QString("update username set password='%2',aut='%3',where username=%1;")
+                         .arg(info.username)
+                         .arg(info.password)
+                         .arg(info.aut);
+    bool ret= sql.exec(strSql);
+    QSqlError e =sql.lastError();
+    if(e.isValid()){
+        qDebug()<<e.text();
+    }
+    return ret;
+}
+
+bool stu_sql::AddUser(UserInfo info)
+{
+    QSqlQuery sql(m_db);
+    QString strSql = QString("insert into username valuse('%1','%2','%3');")
+                         .arg(info.username)
+                         .arg(info.password)
+                         .arg(info.aut);
+    return sql.exec(strSql);
+}
+
+bool stu_sql::delUser(QString struserName)
+{
+    QSqlQuery sql(m_db);
+    return sql.exec(QString("delect from username where username=%1;").arg(struserName));
 }
 

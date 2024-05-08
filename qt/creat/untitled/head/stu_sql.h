@@ -35,9 +35,9 @@ public:
     bool UpdateStuInfo(StuInfo info);
     QList<UserInfo> getAllUser();
     bool isExit(QString struser);
-    void changeuserAnt(QString str);
-    void AddUser(UserInfo);
-    void delUser(QString struserName);
+    bool changeuserAnt(UserInfo info);
+    bool AddUser(UserInfo info);
+    bool delUser(QString struserName);
 signals:
 
 private:

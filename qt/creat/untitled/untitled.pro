@@ -33,4 +33,5 @@ RESOURCES += \
 
 DISTFILES += \
     image/login.jpg \
-    image/user.jpg
+    image/user.jpg \
+    ohter/stuqss.css

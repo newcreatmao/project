@@ -1,6 +1,10 @@
 #include "../head/mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QKeyEvent>
+#include <QFile>
+#include <QCoreApplication>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -39,6 +43,32 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key()==Qt::Key_F6){
+        QFile f;
+        QString path = QCoreApplication::applicationDirPath();
+        QList<QString> l;
+        l=path.split("/");
+        int count=0;
+        for(int i=0;i<l.length();i++){
+            if(l[i]=="build"){
+                break;
+            }
+            count++;
+        }
+        QString dirpath;
+        for(int i=0;i<count;i++){
+            dirpath+=l[i]+'/';
+        }
+        f.setFileName(dirpath+"ohter\\stuqss.css");
+        f.open(QIODevice::ReadOnly);
+        QString str = f.readAll();
+        m_dlg.setStyleSheet(str);
+        this->setStyleSheet(str);
+    }
 }
 
 void MainWindow::on_pushButton_clicked()
