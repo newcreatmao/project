@@ -38,11 +38,6 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 212, 233);</string>
     </property>
-    <column>
-     <property name="text">
-      <string notr="true">1</string>
-     </property>
-    </column>
    </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
