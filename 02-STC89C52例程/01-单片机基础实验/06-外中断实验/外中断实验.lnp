@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"外中断实验.obj" 
+TO "外中断实验" 
+RAMSIZE(256) 

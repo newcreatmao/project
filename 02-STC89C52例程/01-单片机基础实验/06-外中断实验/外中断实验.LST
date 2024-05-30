@@ -1,0 +1,107 @@
+C51 COMPILER V9.54   __________                                                            05/29/2024 14:23:01 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE __________
+OBJECT MODULE PLACED IN ÍâÖÐ¶ÏÊµÑé.OBJ
+COMPILER INVOKED BY: D:\51project\Keil_v5\keil\C51\BIN\C51.EXE ÍâÖÐ¶ÏÊµÑé.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND 
+                    -TABS(2)
+
+line level    source
+
+   1          /***************************************************************************
+   2          ÊµÑéÃû³Æ£º Íâ²¿ÖÐ¶ÏÊµÑé
+   3          
+   4          ÊµÑéÄ£¿é:  51µ¥Æ¬»úºËÐÄ°å¡¢·¢¹â¹Ü¡¢²¦Âë¿ª¹Ø¡¢Çá´¥¿ª¹ØÇø
+   5          
+   6          ÊµÑé½ÓÏß£º 51µ¥Æ¬»úºËÐÄ°å------·¢¹â¹Ü¡¢²¦Âë¿ª¹Ø¡¢Çá´¥¿ª¹ØÇø
+   7          
+   8                      P1---------J4 
+   9                      
+  10                      P3.2---------K1
+  11                      
+  12          ÏÖÏóÃèÊö£º°´¶¯Ò»ÏÂK1£¬LED°´ÕÕ¶þ½øÖÆ¼ÓµÄ·½Ê½Ï¨Ãð
+  13          
+  14          ¸üÐÂÊ±¼ä£º2017.10.17
+  15          ***************************************************************************/
+  16          
+  17          
+  18          #include<reg52.h> //Ìí¼Ó¿âÎÄ¼þ
+  19          #define uint unsigned int
+  20          
+  21          void delay(int t){
+  22   1        while(t--){
+  23   2        unsigned char data i, j;
+  24   2        i = 11;
+  25   2        j = 190;
+  26   2        do
+  27   2        {
+  28   3          while (--j);
+  29   3        } while (--i);
+  30   2        }
+  31   1      }
+  32          
+  33          void light_flout(){
+  34   1        int i;
+  35   1        for(i=0;i<8;i++){
+  36   2          P1=(0x01<<i);
+  37   2          delay(50);
+  38   2        }
+  39   1        for(i=7;i>-1;i--){
+  40   2          P1=(0x01<<i);
+  41   2          delay(50);
+  42   2        }
+  43   1      }
+  44          
+  45          void main(void)
+  46          { 
+  47   1        IE=0x85;
+  48   1        PX1=1;
+  49   1        IT0 = 1;    //Íâ²¿ÖÐ¶Ï0£¬Âö³å´¥·¢·½Ê½£¬ÏÂ½µÑØ´¥·¢ÓÐÐ
+  50   1        IT1 = 1;
+  51   1        while(1){
+  52   2              light_flout();
+  53   2        }
+  54   1      }
+C51 COMPILER V9.54   __________                                                            05/29/2024 14:23:01 PAGE 2   
+
+  55          
+  56          void INIT_0(void) interrupt 0
+  57          {
+  58   1        int i=0;
+  59   1        P1=0xFF;
+  60   1        for(i=0;i<3;i++){
+  61   2        P1=0x00;
+  62   2        delay(50);
+  63   2        P1=0xFF;
+  64   2        delay(50);
+  65   2        }
+  66   1      }
+  67          
+  68          void INIT_1(void) interrupt 2
+  69          {
+  70   1        int i=0;
+  71   1        for(i=0;i<3;i++){
+  72   2        P1=0x0F;
+  73   2        delay(50);
+  74   2        P1=0xF0;
+  75   2        delay(50);
+  76   2        }
+  77   1      }
+  78          
+  79          
+  80          
+  81          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    226    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

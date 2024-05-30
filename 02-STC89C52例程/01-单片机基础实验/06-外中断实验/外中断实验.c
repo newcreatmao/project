@@ -16,23 +16,64 @@
 
 
 #include<reg52.h>	//Ìí¼Ó¿âÎÄ¼ş
-#include<stdio.h>	
 #define uint unsigned int
-uint a = 0xFF;
+
+void delay(int t){
+	while(t--){
+	unsigned char data i, j;
+	i = 11;
+	j = 190;
+	do
+	{
+		while (--j);
+	} while (--i);
+	}
+}
+
+void light_flout(){
+	int i;
+	for(i=0;i<8;i++){
+		P1=(0x01<<i);
+		delay(50);
+	}
+	for(i=7;i>-1;i--){
+		P1=(0x01<<i);
+		delay(50);
+	}
+}
 
 void main(void)
 {	
-
-	IE = 0x81;		//Æô¶¯Íâ²¿ÖĞ¶Ï0
-	IT0 = 1;		//Íâ²¿ÖĞ¶Ï0£¬Âö³å´¥·¢·½Ê½£¬ÏÂ½µÑØ´¥·¢ÓĞĞ§
-	while(1);
+	IE=0x85;
+	PX1=1;
+	IT0 = 1;		//Íâ²¿ÖĞ¶Ï0£¬Âö³å´¥·¢·½Ê½£¬ÏÂ½µÑØ´¥·¢ÓĞĞ
+	IT1 = 1;
+	while(1){
+				light_flout();
+	}
 }
 
-void INIT_0(void) interrupt 2
+void INIT_0(void) interrupt 0
 {
-	a += 1;		
-	P1 = a;          //P1¼Ó1
+	int i=0;
+	P1=0xFF;
+	for(i=0;i<3;i++){
+	P1=0x00;
+	delay(50);
+	P1=0xFF;
+	delay(50);
+	}
+}
 
+void INIT_1(void) interrupt 2
+{
+	int i=0;
+	for(i=0;i<3;i++){
+	P1=0x0F;
+	delay(50);
+	P1=0xF0;
+	delay(50);
+	}
 }
 
 
