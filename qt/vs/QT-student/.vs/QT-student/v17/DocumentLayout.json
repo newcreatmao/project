@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\project\\qt\\vs\\QT-student\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QTstudent.ui",
+              "DocumentMoniker": "D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui",
+              "RelativeDocumentMoniker": "QT-student\\ui\\QTstudent.ui",
+              "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui",
+              "RelativeToolTip": "QT-student\\ui\\QTstudent.ui",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAFAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVDhPlVNLSgNBEK2ezkwk95CACyMYyVpBcZdDuA9eQfQCHsGdZJWN6CCKQZJNMsvgEQKS/Xy6p9uqmj8RPy9507/6vK6aEdZaCIIAEFYIkdLkO6CdjOMYpJRmMBhI2hO4TQewXC6JNk1Ta3RqU5VanWirI2VVmNg4jJnT6dRuPjd2NpvF5Ed08uwYjLMgi9GCyROAyYgKodPpQHe3683nc00\u002BDj1KGPwbdEsr8joP6LouLIIFrD5WZC0x\u002BY5DBkhRN7R0OdaUgfZun9/gYK8HR70\u002B9PcPwfM88vMcvDcUrGcmkiKibEm4PD8G6UqQnuSARhvyMUUAQaOQDhq0mBd393zBm0cfHAxwPXnCSgksFv5w1EZz0m0FWCwildWR2C1UwGsE\u002BlFZWYHWHMA0akAKhIMZkGiX9aZZ5lJB7ldegckZagquJg9ZHXLwGUeGysf3fVq7Sqnk7OSUD38DvmTw8v5KnWg3FKhYgcE61PcKapUVjecYgK6A86oL9J5Ta5IwARWqLepYl3NCFEUcrNkFrO5fkftUCijif0D2w\u002BHQiPF4TOv2er2OfvqcEfwJFyC1o9FIfAEY9LSsVtvctwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-06-01T03:33:07.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
