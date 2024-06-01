@@ -1,0 +1,3 @@
+D:\Users\APPuse\qt\qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\use.dir/objects.a
+D:\Users\APPuse\qt\qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\use.dir/objects.a @CMakeFiles\use.dir\objects1.rsp
+D:\Users\APPuse\qt\qt\Tools\mingw1120_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\use.dir/objects.a -Wl,--no-whole-archive -o use.exe -Wl,--out-implib,libuse.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\use.dir\linkLibs.rsp

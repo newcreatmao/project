@@ -39,11 +39,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."
 				}
 			],
 			"type" : "STRING",
-			"value" : "Release"
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/project/cmake/project1/build"
+			"value" : "d:/project/cmake/project1/out/build/use"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "UNINITIALIZED",
 			"value" : "D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/g++.exe"
 		},
 		{
@@ -299,10 +299,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "UNINITIALIZED",
 			"value" : "D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/gcc.exe"
 		},
 		{
@@ -554,18 +554,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "TRUE"
-		},
-		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
 			"properties" : 
 			[
@@ -587,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/project/cmake/project1/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/project/cmake/project1/out/build/use/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -671,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/use"
+			"value" : "D:/project/cmake/project1/out/install/use"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -1367,7 +1355,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/project/cmake/project1/build"
+			"value" : "D:/project/cmake/project1/out/build/use"
 		},
 		{
 			"name" : "use_IS_TOP_LEVEL",

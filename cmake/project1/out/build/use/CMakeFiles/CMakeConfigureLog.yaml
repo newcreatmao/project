@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        D:/project/cmake/project1/build/CMakeFiles/3.27.7/CompilerIdC/a.exe
+        D:/project/cmake/project1/out/build/use/CMakeFiles/3.27.7/CompilerIdC/a.exe
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        D:/project/cmake/project1/build/CMakeFiles/3.27.7/CompilerIdCXX/a.exe
+        D:/project/cmake/project1/out/build/use/CMakeFiles/3.27.7/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -61,21 +61,21 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8"
-      binary: "D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8"
+      source: "D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8"
+      binary: "D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8'
+        Change Dir: 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8'
         
-        Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_ba27c/fast
-        D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ba27c.dir\\build.make CMakeFiles/cmTC_ba27c.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8'
-        Building C object CMakeFiles/cmTC_ba27c.dir/CMakeCCompilerABI.c.obj
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_a80bf/fast
+        D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a80bf.dir\\build.make CMakeFiles/cmTC_a80bf.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8'
+        Building C object CMakeFiles/cmTC_a80bf.dir/CMakeCCompilerABI.c.obj
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -83,8 +83,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_ba27c.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccNf2NFq.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_a80bf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cchYWpku.s
         GNU C17 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -105,17 +105,17 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 91c4f3c4bd8e22d803fb4b1665a580b8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccNf2NFq.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cchYWpku.s
         GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
         COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_ba27c.exe
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ba27c.dir\\link.txt --verbose=1
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ba27c.dir/objects.a
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_ba27c.dir/objects.a @CMakeFiles\\cmTC_ba27c.dir\\objects1.rsp
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_ba27c.dir/objects.a -Wl,--no-whole-archive -o cmTC_ba27c.exe -Wl,--out-implib,libcmTC_ba27c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_a80bf.exe
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a80bf.dir\\link.txt --verbose=1
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a80bf.dir/objects.a
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a80bf.dir/objects.a @CMakeFiles\\cmTC_a80bf.dir\\objects1.rsp
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_a80bf.dir/objects.a -Wl,--no-whole-archive -o cmTC_a80bf.exe -Wl,--out-implib,libcmTC_a80bf.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -126,10 +126,10 @@ events:
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
         COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba27c.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ba27c.'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc3JR74F.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_ba27c.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_ba27c.dir/objects.a --no-whole-archive --out-implib libcmTC_ba27c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba27c.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ba27c.'
-        mingw32-make.exe[1]: Leaving directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80bf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a80bf.'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc13hv9F.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_a80bf.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_a80bf.dir/objects.a --no-whole-archive --out-implib libcmTC_a80bf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80bf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a80bf.'
+        mingw32-make.exe[1]: Leaving directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8'
         
       exitCode: 0
   -
@@ -161,13 +161,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8']
+        ignore line: [Change Dir: 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_ba27c/fast]
-        ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ba27c.dir\\build.make CMakeFiles/cmTC_ba27c.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-6lvrj8']
-        ignore line: [Building C object CMakeFiles/cmTC_ba27c.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_a80bf/fast]
+        ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a80bf.dir\\build.make CMakeFiles/cmTC_a80bf.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-q3nwl8']
+        ignore line: [Building C object CMakeFiles/cmTC_a80bf.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -175,8 +175,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 11.2.0 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\']
-        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_ba27c.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccNf2NFq.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\']
+        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_a80bf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cchYWpku.s]
         ignore line: [GNU C17 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -197,8 +197,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 91c4f3c4bd8e22d803fb4b1665a580b8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\']
-        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccNf2NFq.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\']
+        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cchYWpku.s]
         ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
         ignore line: [COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/]
@@ -209,12 +209,12 @@ events:
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ba27c.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_ba27c.exe]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ba27c.dir\\link.txt --verbose=1]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ba27c.dir/objects.a]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_ba27c.dir/objects.a @CMakeFiles\\cmTC_ba27c.dir\\objects1.rsp]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_ba27c.dir/objects.a -Wl --no-whole-archive -o cmTC_ba27c.exe -Wl --out-implib libcmTC_ba27c.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a80bf.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_a80bf.exe]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a80bf.dir\\link.txt --verbose=1]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a80bf.dir/objects.a]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a80bf.dir/objects.a @CMakeFiles\\cmTC_a80bf.dir\\objects1.rsp]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_a80bf.dir/objects.a -Wl --no-whole-archive -o cmTC_a80bf.exe -Wl --out-implib libcmTC_a80bf.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -232,13 +232,13 @@ events:
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba27c.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ba27c.']
-        link line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc3JR74F.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_ba27c.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_ba27c.dir/objects.a --no-whole-archive --out-implib libcmTC_ba27c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80bf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a80bf.']
+        link line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc13hv9F.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_a80bf.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_a80bf.dir/objects.a --no-whole-archive --out-implib libcmTC_a80bf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc3JR74F.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc13hv9F.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -264,7 +264,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_ba27c.exe] ==> ignore
+          arg [cmTC_a80bf.exe] ==> ignore
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
@@ -274,10 +274,10 @@ events:
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_ba27c.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_a80bf.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_ba27c.dll.a] ==> ignore
+          arg [libcmTC_a80bf.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -331,21 +331,21 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r"
-      binary: "D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r"
+      source: "D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe"
+      binary: "D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r'
+        Change Dir: 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe'
         
-        Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_45882/fast
-        D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_45882.dir\\build.make CMakeFiles/cmTC_45882.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r'
-        Building CXX object CMakeFiles/cmTC_45882.dir/CMakeCXXCompilerABI.cpp.obj
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp
+        Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_ebcb6/fast
+        D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ebcb6.dir\\build.make CMakeFiles/cmTC_ebcb6.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe'
+        Building CXX object CMakeFiles/cmTC_ebcb6.dir/CMakeCXXCompilerABI.cpp.obj
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe
         Target: x86_64-w64-mingw32
@@ -353,8 +353,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_45882.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccHOw39b.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_ebcb6.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccF2XP7f.s
         GNU C++17 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -381,17 +381,17 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: d7afaace9697386afb994a04753f738f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccHOw39b.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccF2XP7f.s
         GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
         COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_45882.exe
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_45882.dir\\link.txt --verbose=1
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_45882.dir/objects.a
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_45882.dir/objects.a @CMakeFiles\\cmTC_45882.dir\\objects1.rsp
-        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_45882.dir/objects.a -Wl,--no-whole-archive -o cmTC_45882.exe -Wl,--out-implib,libcmTC_45882.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_ebcb6.exe
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ebcb6.dir\\link.txt --verbose=1
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ebcb6.dir/objects.a
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_ebcb6.dir/objects.a @CMakeFiles\\cmTC_ebcb6.dir\\objects1.rsp
+        D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_ebcb6.dir/objects.a -Wl,--no-whole-archive -o cmTC_ebcb6.exe -Wl,--out-implib,libcmTC_ebcb6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -402,10 +402,10 @@ events:
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
         COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_45882.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_45882.'
-         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc89mbPa.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_45882.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_45882.dir/objects.a --no-whole-archive --out-implib libcmTC_45882.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_45882.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_45882.'
-        mingw32-make.exe[1]: Leaving directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ebcb6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ebcb6.'
+         D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cceKUFEd.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_ebcb6.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_ebcb6.dir/objects.a --no-whole-archive --out-implib libcmTC_ebcb6.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ebcb6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ebcb6.'
+        mingw32-make.exe[1]: Leaving directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe'
         
       exitCode: 0
   -
@@ -443,13 +443,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r']
+        ignore line: [Change Dir: 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_45882/fast]
-        ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_45882.dir\\build.make CMakeFiles/cmTC_45882.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/build/CMakeFiles/CMakeScratch/TryCompile-yuwj1r']
-        ignore line: [Building CXX object CMakeFiles/cmTC_45882.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): D:/Users/APPuse/qt/qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_ebcb6/fast]
+        ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ebcb6.dir\\build.make CMakeFiles/cmTC_ebcb6.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/project/cmake/project1/out/build/use/CMakeFiles/CMakeScratch/TryCompile-kvzwoe']
+        ignore line: [Building CXX object CMakeFiles/cmTC_ebcb6.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -457,8 +457,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 11.2.0 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\']
-        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_45882.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccHOw39b.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\']
+        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_ebcb6.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccF2XP7f.s]
         ignore line: [GNU C++17 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -485,8 +485,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: d7afaace9697386afb994a04753f738f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\']
-        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccHOw39b.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\']
+        ignore line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\ccF2XP7f.s]
         ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
         ignore line: [COMPILER_PATH=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/]
@@ -497,12 +497,12 @@ events:
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_45882.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_45882.exe]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_45882.dir\\link.txt --verbose=1]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_45882.dir/objects.a]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_45882.dir/objects.a @CMakeFiles\\cmTC_45882.dir\\objects1.rsp]
-        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_45882.dir/objects.a -Wl --no-whole-archive -o cmTC_45882.exe -Wl --out-implib libcmTC_45882.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_ebcb6.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_ebcb6.exe]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ebcb6.dir\\link.txt --verbose=1]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ebcb6.dir/objects.a]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_ebcb6.dir/objects.a @CMakeFiles\\cmTC_ebcb6.dir\\objects1.rsp]
+        ignore line: [D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_ebcb6.dir/objects.a -Wl --no-whole-archive -o cmTC_ebcb6.exe -Wl --out-implib libcmTC_ebcb6.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -520,13 +520,13 @@ events:
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_45882.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_45882.']
-        link line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc89mbPa.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_45882.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_45882.dir/objects.a --no-whole-archive --out-implib libcmTC_45882.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ebcb6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_ebcb6.']
+        link line: [ D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cceKUFEd.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_ebcb6.exe D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_ebcb6.dir/objects.a --no-whole-archive --out-implib libcmTC_ebcb6.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cc89mbPa.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\MAOZHI~1\\AppData\\Local\\Temp\\cceKUFEd.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -552,7 +552,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_45882.exe] ==> ignore
+          arg [cmTC_ebcb6.exe] ==> ignore
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
@@ -562,10 +562,10 @@ events:
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LD:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [D:/Users/APPuse/qt/qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_45882.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_ebcb6.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_45882.dll.a] ==> ignore
+          arg [libcmTC_ebcb6.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

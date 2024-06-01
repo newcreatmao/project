@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = D:\project\cmake\project1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\project\cmake\project1\build
+CMAKE_BINARY_DIR = D:\project\cmake\project1\out\build\use
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/use.dir/clean
 CMakeFiles/use.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\use.dir\build.make CMakeFiles/use.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\use.dir\build.make CMakeFiles/use.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\project\cmake\project1\build\CMakeFiles --progress-num=1,2 "Built target use"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\project\cmake\project1\out\build\use\CMakeFiles --progress-num=1,2 "Built target use"
 .PHONY : CMakeFiles/use.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/use.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\cmake\project1\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\cmake\project1\out\build\use\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/use.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\cmake\project1\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\cmake\project1\out\build\use\CMakeFiles 0
 .PHONY : CMakeFiles/use.dir/rule
 
 # Convenience name for target.
