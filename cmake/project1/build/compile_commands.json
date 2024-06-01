@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/project/cmake/project1/build",
+  "command": "D:\\Users\\APPuse\\qt\\qt\\Tools\\mingw1120_64\\bin\\g++.exe   -O3 -DNDEBUG -o CMakeFiles\\use.dir\\main.cpp.obj -c D:\\project\\cmake\\project1\\main.cpp",
+  "file": "D:/project/cmake/project1/main.cpp",
+  "output": "CMakeFiles/use.dir/main.cpp.obj"
+}
+]
