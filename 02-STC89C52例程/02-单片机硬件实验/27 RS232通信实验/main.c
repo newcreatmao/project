@@ -1,117 +1,114 @@
-/***************************************************************************
-实验名称： RS232实验
+#include <reg52.H>
 
-实验模块:  51单片机核心板
+char string[20];
+unsigned char tmp;
+char code st[] = "string";
+char code nu[] = "int";
+char code fl[] = "float";
+bit flag_st = 0; 
+bit flag_ed = 0;
+bit flag_point = 0, flag_str = 0, flag_num = 0; 
+sbit    KEY = P1^0;
 
-实验接线：  将核心板RS232串口通过USB线连接到计算机上
-
-现象描述：	在串口调试助手中接收到单片机发送的数据
-
-更新时间：	2017.10.17
-***************************************************************************/
-
-
-#include <reg52.h> 
-
-unsigned char key_s, key_v, tmp;
-char code str[] = "RS232!\n\r";
-
-sbit	K1 = P1^0;
-
-
-//扫描按键
-
-bit scan_key()	
+void Delay(unsigned int xms)        
 {
-	key_s = 0x00;
-	key_s |= K1;
-	return(key_s ^ key_v);	
+    unsigned char i, j;
+    while(xms)
+    {
+    i = 2;
+    j = 239;
+    do
+    {
+        while (--j);
+    } while (--i);
+    xms--;
+    }
 }
 
-//---------------------------------------------------------------
-//传送一个字符
-//---------------------------------------------------------------
-void send_char(unsigned char txd)
-{
-	SBUF = txd;
-	while(!TI);					// 等特数据传送
-	TI = 0;						// 清除数据传送标志
-}
-
-//---------------------------------------------------------------
-// 传送字串
-//---------------------------------------------------------------
-void send_str()
-{
-	unsigned char i = 0;
-	while(str[i] != '\0')
-	{
-		SBUF = str[i];
-		while(!TI);				// 等特数据传送
-		TI = 0;					// 清除数据传送标志
-		i++;					 // 下一个字符
-	}
-}
-
-//---------------------------------------------------------------
-// 键处理
-//---------------------------------------------------------------
-void proc_key()
-{
-	if((key_v & 0x01) == 0)
-	{						   	// K1按下
-		send_str();				// 传送字串"您好！谢谢您...
-	}
-}
-
-//---------------------------------------------------------------
-// 延时子程序
-//---------------------------------------------------------------
-void delayms(unsigned char ms)	
-
-{						
-	unsigned char i;
-	while(ms--)
-	{
-		for(i = 0; i < 120; i++);
-	}
-}
-//---------------------------------------------------------------
-// 函数名称： UART_init()串口初始化函数
-// 函数功能： 在系统时钟为11.0592MHZ时，设定串口波特率为9600bit/s
-//---------------------------------------------------------------
 void UART_init()
 {
-	TMOD = 0x20;		// 定时器1工作于8位自动重载模式, 用于产生波特率
-	TH1 = 0xFD;			// 波特率9600
-	TL1 = 0xFD;	
-	SCON = 0x50;		// 设定串行口工作方式
-	PCON &= 0xef;		// 波特率不倍增		
-	TR1 = 1;			// 启动定时器1
-	IE = 0x0;			// 禁止任何中断
+    TMOD = 0x20;        // ???1???8??????????, ???????
+    TH1 = 0xFD;            // ???9600
+    TL1 = 0xFD;    
+    SCON = 0x50;        // ?????????
+    PCON &= 0xef;        // ??????        
+    TR1 = 1;            // ?????1
+    IE = 0x0;            // ??????
 }
 
-//************************************************************
-main()
+void send_str(char *s)       
 {
-	unsigned char i = 0;
-   UART_init(); 	
-	while(1)
-	{
-		if(scan_key())				// 扫描按键
-		{
-			delayms(10);			// 延时去抖动
-			if(scan_key())			// 再次扫描
-			{
-				key_v = key_s;		// 保存键值
-				proc_key();		   	// 键处理
-			}
-		}
-		if(RI)					   	// 是否有数据到来
-		{
-			RI = 0;
-			tmp = SBUF;			   	// 暂存接收到的数据
-			send_char(tmp);	   		// 回传接收到的数据
-		}
-	}
+    unsigned char i = 0;
+    while(s[i] != '\0')
+    {
+        SBUF = s[i];
+        while(!TI);                // ??????
+        TI = 0;                    // ????????
+        i++;                     // ?????
+    }
+}
+
+
+void proc_key(){
+    int tmp = 0;    
+    if(KEY == 0){           
+        if(flag_point == 1 && flag_str == 0 && flag_num==1)     
+            send_str(fl);
+        else if(flag_point == 0 && flag_num== 1 && flag_str == 0) 
+            send_str(nu);
+        else if(flag_str == 1) 
+            send_str(st);
+    }
+    flag_point = 0;
+    flag_str = 0;
+    flag_num = 0;
+}
+
+void main()
+{
+    unsigned char i = 0;
+    int stt = 0;
+    unsigned char type = 0;    
+    
+  UART_init();     
+    while(1)
+    {
+        if(KEY == 0)                // ????
+        {
+            Delay(10);                // ?????
+            if(KEY == 0)            // ????
+                proc_key();           // ???
+        }
+        if(RI){                                   // ???????
+            RI = 0;
+            tmp = SBUF;                   // ????????
+            if (tmp == '('){
+                flag_st = 1;
+                flag_ed=0;
+            }
+            if (tmp == ')'){
+                flag_st = 1;
+                flag_ed=1;
+            }
+            if(flag_st == 1 && flag_ed == 0){
+                if (tmp != '(' && tmp != ')' && stt < 19){
+                    string[stt] = tmp;
+                    stt++;
+                    if(tmp == '.'&&flag_point!=1)
+                        flag_point = 1;
+                    else if(tmp >= '0' && tmp <= '9') 
+                        flag_num = 1;
+                    else if(tmp == '(' || tmp == ')') {;}
+                    else flag_str = 1;
+                }    
+            }
+            if(flag_st == 1 && flag_ed == 1)
+            {
+                string[stt+1] = '\0';
+                stt = 0;
+                flag_st = 0;
+                flag_ed=0;
+            }
+        }
+    }
 }

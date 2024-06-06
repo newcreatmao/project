@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        10/25/2017  09:47:09  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/05/2024  14:48:35  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE 模拟电压测量.obj TO 模拟电压测量 RAMSIZE (256)
+D:\51PROJECT\KEIL_V5\KEIL\C51\BIN\BL51.EXE 模拟电压测量.obj TO 模拟电压测量 RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
@@ -10,15 +10,15 @@ MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
 
 INPUT MODULES INCLUDED:
   模拟电压测量.obj (____________)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
-  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
-  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
-  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
-  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51FPS.LIB (?C?CASTF)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  D:\51PROJECT\KEIL_V5\KEIL\C51\LIB\C51S.LIB (?C_INIT)
 
 
 LINK MAP OF MODULE:  模拟电压测量 (____________)
@@ -59,7 +59,7 @@ SEGMENT                             DATA_GROUP
 
 ?PR?MAIN?____________             0008H    0006H
   +--> ?PR?_DELAY?____________
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/25/2017  09:47:09  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/05/2024  14:48:35  PAGE 2
 
 
   +--> ?PR?READ?____________
@@ -89,16 +89,11 @@ SYMBOL TABLE OF MODULE:  模拟电压测量 (____________)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:0012H         PUBLIC        select
-  D:00C0H         PUBLIC        P4
-  D:00C8H         PUBLIC        P5
-  D:00E8H         PUBLIC        P6
-  D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
   C:045DH         PUBLIC        _delay
   B:00B0H.2       PUBLIC        CS
   D:00B8H         PUBLIC        IP
   C:042FH         PUBLIC        read
-  D:00D8H         PUBLIC        CCON
   C:03BFH         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
@@ -106,6 +101,7 @@ SYMBOL TABLE OF MODULE:  模拟电压测量 (____________)
   C:0423H         PUBLIC        _delay1
   B:00B0H.1       PUBLIC        SDA
   B:00B0H.0       PUBLIC        CLK
+  D:00C8H         PUBLIC        T2CON
   C:0357H         PUBLIC        _display
   D:00D0H         PUBLIC        PSW
   C:0419H         SYMBOL        L?0022
@@ -119,13 +115,13 @@ SYMBOL TABLE OF MODULE:  模拟电压测量 (____________)
   C:0423H         LINE#         42
   C:0427H         LINE#         43
   C:0427H         LINE#         44
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/25/2017  09:47:09  PAGE 3
-
-
   C:042CH         LINE#         45
   C:042EH         LINE#         46
   -------         ENDPROC       _DELAY1
   -------         PROC          _DISPLAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/05/2024  14:48:35  PAGE 3
+
+
   D:000EH         SYMBOL        dis2
   -------         DO            
   D:0002H         SYMBOL        dis
@@ -179,13 +175,13 @@ SYMBOL TABLE OF MODULE:  模拟电压测量 (____________)
   C:0458H         LINE#         91
   C:045CH         LINE#         92
   -------         ENDPROC       READ
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/25/2017  09:47:09  PAGE 4
-
-
   -------         PROC          MAIN
   -------         DO            
   D:0008H         SYMBOL        data2
   D:000AH         SYMBOL        data1
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/05/2024  14:48:35  PAGE 4
+
+
   -------         ENDDO         
   C:03BFH         LINE#         95
   C:03BFH         LINE#         96

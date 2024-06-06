@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\QTstudent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\src\\QTstudent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp",
+              "RelativeDocumentMoniker": "QT-student\\src\\main.cpp",
+              "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp",
+              "RelativeToolTip": "QT-student\\src\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-06T09:54:22.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QTstudent.cpp",
+              "DocumentMoniker": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\QTstudent.cpp",
+              "RelativeDocumentMoniker": "QT-student\\src\\QTstudent.cpp",
+              "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\QTstudent.cpp",
+              "RelativeToolTip": "QT-student\\src\\QTstudent.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-06T09:54:21.918Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,8 +62,8 @@
               "RelativeDocumentMoniker": "QT-student\\ui\\QTstudent.ui",
               "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui",
               "RelativeToolTip": "QT-student\\ui\\QTstudent.ui",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAFAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVDhPlVNLSgNBEK2ezkwk95CACyMYyVpBcZdDuA9eQfQCHsGdZJWN6CCKQZJNMsvgEQKS/Xy6p9uqmj8RPy9507/6vK6aEdZaCIIAEFYIkdLkO6CdjOMYpJRmMBhI2hO4TQewXC6JNk1Ta3RqU5VanWirI2VVmNg4jJnT6dRuPjd2NpvF5Ed08uwYjLMgi9GCyROAyYgKodPpQHe3683nc00\u002BDj1KGPwbdEsr8joP6LouLIIFrD5WZC0x\u002BY5DBkhRN7R0OdaUgfZun9/gYK8HR70\u002B9PcPwfM88vMcvDcUrGcmkiKibEm4PD8G6UqQnuSARhvyMUUAQaOQDhq0mBd393zBm0cfHAxwPXnCSgksFv5w1EZz0m0FWCwildWR2C1UwGsE\u002BlFZWYHWHMA0akAKhIMZkGiX9aZZ5lJB7ldegckZagquJg9ZHXLwGUeGysf3fVq7Sqnk7OSUD38DvmTw8v5KnWg3FKhYgcE61PcKapUVjecYgK6A86oL9J5Ta5IwARWqLepYl3NCFEUcrNkFrO5fkftUCijif0D2w\u002BHQiPF4TOv2er2OfvqcEfwJFyC1o9FIfAEY9LSsVtvctwAAAABJRU5ErkJggg==",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAFAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
               "WhenOpened": "2024-06-01T03:33:07.803Z",
               "EditorCaption": ""
             }
