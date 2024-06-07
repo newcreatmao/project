@@ -53,7 +53,3 @@ plt.ylabel("相关系数")
 plt.title("零销售量及各统计数据的相关系数")
 
 plt.show()
-plt.savefig("barChart.jpg")
-
-
-
