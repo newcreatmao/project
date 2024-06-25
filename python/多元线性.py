@@ -27,7 +27,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-X = df[['x1','x2','x3','x4']]
+X = df[['x1','x2','x3','x4']]#选取相关系数大于0.9
 y = df['y']
 
 # 添加常数项

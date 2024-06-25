@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+/usr/bin/c++    -rdynamic CMakeFiles/use.dir/main.cpp.o  -o ../../bin/use  -Wl,-rpath,/usr/local/lib /usr/local/lib/libwiringPi.so 
+=======
+/usr/bin/c++     CMakeFiles/use.dir/main.cpp.o  -o ../../bin/use  -Wl,-rpath,/usr/local/lib /usr/local/lib/libwiringPi.so 
+>>>>>>> 4b12c81955125c612019b357e5526bba92195bab
