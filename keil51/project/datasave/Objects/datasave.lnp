@@ -1,0 +1,6 @@
+".\Objects\delay.obj",
+".\Objects\LCD1602.obj",
+".\Objects\Key.obj",
+".\Objects\main.obj" 
+TO ".\Objects\datasave" 
+PRINT(".\Listings\datasave.m51") RAMSIZE(256) 

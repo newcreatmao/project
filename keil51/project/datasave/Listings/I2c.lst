@@ -1,0 +1,87 @@
+C51 COMPILER V9.54   I2C                                                                   07/18/2023 14:06:53 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE I2C
+OBJECT MODULE PLACED IN .\Objects\I2c.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE I2c.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\user;..\LCD1602Çý¶¯´ú
+                    -Âë;..\..\³ÌÐòÔ´Âë\KeilProject\12-1 AT24C02Êý¾Ý´æ´¢) DEBUG OBJECTEXTEND PRINT(.\Listings\I2c.lst) TABS(2) OBJECT(.\Object
+                    -s\I2c.obj)
+
+line level    source
+
+   1          //Áù¸öÄ£¿é
+   2          #include <REGX52.H>
+   3          sbit SCL = P2^1;
+   4          sbit SDA = P2^0;
+   5          //³ýÐ´ÖÜÆÚÐèÒª5msÍâ£¬ÆäÓàµÄ²Ù×÷Ê±¼ä¶¼ºÜ¶Ì£¬¶ÔÓÚ51²»ÐèÒªÑÓÊ±
+   6          
+   7          //¿ªÊ¼
+   8          void start()
+   9          {
+  10   1        SCL=SDA=1;//È·±£SDAºÍSCLÎª¸ß£¬Ïàµ±ÓÚ³õÊ¼»¯
+  11   1        SDA=0;
+  12   1        SCL=0;//×¢ÒâÒª°´Ê±ÐòÍ¼µÄË³Ðò
+  13   1      }
+  14          
+  15          //Í£Ö¹
+  16          void stop()
+  17          {
+  18   1        SDA=0;
+  19   1        SCL=1;
+  20   1        SDA=1;
+  21   1      }
+  22          
+  23          //·¢ËÍÒ»¸öbit
+  24          void sendbyte(unsigned char byte)
+  25          {
+  26   1        int i;
+  27   1        for(i=0;i<8;i++)
+  28   1        {
+  29   2        SDA=byte&(0x80>>i)://È¡×î¸ßÎ»
+*** ERROR C141 IN LINE 29 OF I2c.c: syntax error near ':'
+  30   2        SCL=1;
+  31   2        SDA=0;
+  32   2        }
+  33   1      }
+  34          
+  35          //½ÓÊÕÒ»¸öbit
+  36          unsigned char receivebyte()
+  37          {
+  38   1        unsigned char byte=0x00,i;//³õÊ¼»¯byte²ÅÄÜ½áºÏÏÂÃæµÄsdaÅÐ¶Ï
+  39   1        
+  40   1        SDA=1;//ÊÍ·Å×ÜÏß£¬ºÃÈÃ´Ó»ú²Ù×÷×ÜÏß£¬Òª²»´Ó»ú´«ÊäµÄ¶¼ÊÇ0£¬³ÌÐò¿ØÖÆµÄÖ÷ÒªÊÇÖ÷»ú
+  41   1        for(i=0;i<8;i++)
+  42   1        {
+  43   2          //ÔÚÕâÀïÃæ¶ÁÊý¾ÝÊÇ´ÓsdaÉÏ¶Á
+  44   2        SCL=1;//sclÀ­¸ßºósdaµÄÖµ±äÎªÊý¾ÝµÄ×î¸ßÎ»£¬Ã¿´ÎsclÀ­¸ß£¬sda½ÓÊÕ¶ÔÓ¦Î»ÖÃµÄÊý¾Ý
+  45   2        if(SDA){byte|=(0x80>>i);}//SDA·µ»ØµÄÊäÈëµÄÊý¾ÝÒ²ÊÇ010101µÄ£¬¹ÊÖ»ÐèÒªÅÐ¶ÏsdaÖµ¾Í¿É½«Ò»¸öbyteµÄÖµÖð¸ö½ÓÊÕ£¬
+             -ÊÇ1Ôò°´Î»¸ø1
+  46   2        //ÏÖÔÚÐèÒª¶ÁÈ¡´Ó»ú·µ»ØµÄÊý¾Ý£¬´Ó»úÏÖÔÚ¿ØÖÆsda£¬ËùÒÔÐèÒª°ÑsdaµÄ×´Ì¬Ð´½øbyteÖÐ£¬Ö÷»ú¶ÁÈ¡byte¼´¿ÉÖ±µ½´Ó»ú·µ»
+             -ØµÄÖµÁË
+  47   2        SCL=0;
+  48   2        return byte;
+  49   2        }
+  50   1      }
+C51 COMPILER V9.54   I2C                                                                   07/18/2023 14:06:53 PAGE 2   
+
+  51          
+  52          //·¢ËÍÓ¦´ð
+  53          void endack(unsigned char ack)
+  54          {
+  55   1        SDA=ack;
+  56   1        SCL=1;
+  57   1        SCL=0;
+  58   1      }
+  59          
+  60          //½ÓÊÕÓ¦´ð
+  61          unsigned char receiveack()
+  62          {
+  63   1        unsigned char ackbit;
+  64   1        SDA=1;
+  65   1        SCL=1;
+  66   1        if(SDA)ackbit=1;
+  67   1        SCL=0;
+  68   1        return ackbit;//0ÎªÓ¦´ð£¬1ÎªÎÞÓ¦´ð
+  69   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

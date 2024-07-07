@@ -1,0 +1,152 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/17/2023  14:48:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\51PROJECT\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\note.obj TO .\Objects\try PRINT (.\Listings\try.m51)
+>>  RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\note.obj (NOTE)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+
+
+LINK MAP OF MODULE:  .\Objects\try (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         _DATA_GROUP_
+                    001CH     0004H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            IDATA   0022H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     035CH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    0362H     008EH     UNIT         ?C?LIB_CODE
+            CODE    03F0H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    0417H     000FH     UNIT         ?PR?MAIN?MAIN
+            CODE    0426H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0432H     0007H     UNIT         ?PR?INT0_ROUTINE?NOTE
+            CODE    0439H     0003H     UNIT         ?CO?MAIN
+            CODE    043CH     0001H     UNIT         ?PR?TIMER_INIT?NOTE
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\try (MAIN)
+
+
+SEGMENT                           BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH     START    LENGTH
+------------------------------------------------------------------
+?C_C51STARTUP                  -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/17/2023  14:48:09  PAGE 2
+
+
+?PR?MAIN?MAIN                  -----    -----      -----    -----
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PRINTF?PRINTF              0020H.0  0001H.1    0008H    0014H
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\try (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0417H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0417H         LINE#         4
+  C:0417H         LINE#         5
+  C:0417H         LINE#         6
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        NOTE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0432H         PUBLIC        Int0_Routine
+  D:0088H         PUBLIC        TCON
+  C:043CH         PUBLIC        Timer_Init
+  -------         PROC          TIMER_INIT
+  C:043CH         LINE#         3
+  C:043CH         LINE#         5
+  -------         ENDPROC       TIMER_INIT
+  -------         PROC          INT0_ROUTINE
+  C:0432H         LINE#         7
+  C:0432H         LINE#         8
+  C:0435H         LINE#         9
+  C:0438H         LINE#         12
+  -------         ENDPROC       INT0_ROUTINE
+  -------         ENDMOD        NOTE
+
+  -------         MODULE        PRINTF
+  D:0008H         PUBLIC        ?_PRINTF517?BYTE
+  D:0008H         PUBLIC        ?_PRINTF?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF517?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF?BYTE
+  C:0068H         PUBLIC        _PRINTF
+  C:0068H         PUBLIC        _PRINTF517
+  C:0062H         PUBLIC        _SPRINTF
+  C:0062H         PUBLIC        _SPRINTF517
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?CLDPTR
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/17/2023  14:48:09  PAGE 3
+
+
+  C:0362H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:037BH         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:03A8H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:03BAH         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:03CAH         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:03F0H         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER_INIT?NOTE
+
+Program Size: data=30.1 xdata=0 code=1085
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

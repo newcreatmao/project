@@ -1,0 +1,36 @@
+C51 COMPILER V9.54   NOTE                                                                  08/17/2023 14:48:08 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE NOTE
+OBJECT MODULE PLACED IN .\Objects\note.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE note.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\note.lst) TABS(2) OBJECT(.\Objects\note.obj)
+
+line level    source
+
+   1          #include<REGX52.H>
+   2          #include<stdarg.h>
+   3          void Timer_Init(){
+   4   1      
+   5   1      }
+   6          
+   7          void Int0_Routine(void) interrupt 0 {
+   8   1          TCON &= 0xF0;//并，两个是一才为一
+   9   1          TCON |= 0x01;//或，两个是零才为零
+  10   1      
+  11   1          
+  12   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      8    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

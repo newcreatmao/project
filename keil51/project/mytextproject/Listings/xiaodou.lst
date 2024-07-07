@@ -1,0 +1,47 @@
+C51 COMPILER V9.54   XIAODOU                                                               04/06/2023 21:53:45 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE XIAODOU
+OBJECT MODULE PLACED IN .\Objects\xiaodou.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE text\xiaodou.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\xiaodou.lst) TABS(2) OBJECT(.\Objects\xiaodou.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include"delay.h"
+   3          int dou1()
+   4          {
+   5   1        const char mm=0;
+   6   1        if(P3_1==0)//一定要==
+   7   1            {
+   8   2              delayms(20);
+   9   2              while(P3_1==0);//按下消抖
+  10   2              delayms(20);//松手消抖
+  11   2            }
+  12   1          return mm;
+  13   1      }
+  14          
+  15          void dou2()
+  16          {
+  17   1        if(P3_2==0)//一定要==
+  18   1            {
+  19   2              delayms(20);
+  20   2              while(P3_2==0);//按下消抖
+  21   2              delayms(20);//松手消抖
+  22   2            }
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     51    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,241 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/28/2023  11:53:27  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\first.obj TO .\Objects\mao PRINT (.\Listings\mao.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\first.obj (FIRST)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\mao (FIRST)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?_DELAY?FIRST
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     004CH     UNIT         ?PR?SEVEN?FIRST
+            CODE    084CH     001CH     UNIT         ?PR?_DELAY?FIRST
+            CODE    0868H     0016H     UNIT         ?PR?TOW?FIRST
+            CODE    087EH     0015H     UNIT         ?PR?SIX?FIRST
+            CODE    0893H     0012H     UNIT         ?PR?FIFTH?FIRST
+            CODE    08A5H     000CH     UNIT         ?C_C51STARTUP
+            CODE    08B1H     000BH     UNIT         ?PR?FORTH?FIRST
+            CODE    08BCH     0005H     UNIT         ?PR?FIRST?FIRST
+            CODE    08C1H     0002H     UNIT         ?PR?THIRD?FIRST
+            CODE    08C3H     0001H     UNIT         ?PR?MAIN?FIRST
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\mao (FIRST)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?FIRST
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\mao (FIRST)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FIRST
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/28/2023  11:53:27  PAGE 2
+
+
+  C:0850H         PUBLIC        _delay
+  B:00A0H.0       PUBLIC        P2_0
+  B:00B0H.0       PUBLIC        P3_0
+  C:0893H         PUBLIC        fifth
+  B:00B0H.1       PUBLIC        P3_1
+  C:08C1H         PUBLIC        third
+  C:0800H         PUBLIC        seven
+  C:08B1H         PUBLIC        forth
+  C:08C3H         PUBLIC        main
+  C:08BCH         PUBLIC        first
+  C:087EH         PUBLIC        six
+  C:0868H         PUBLIC        tow
+  C:084CH         SYMBOL        L?0054
+  -------         PROC          L?0053
+  -------         ENDPROC       L?0053
+  C:084CH         SYMBOL        L?0054
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  -------         ENDDO         
+  C:0850H         LINE#         4
+  C:0850H         LINE#         5
+  C:0850H         LINE#         6
+  C:0854H         LINE#         7
+  C:0854H         LINE#         10
+  C:0857H         LINE#         11
+  C:085AH         LINE#         13
+  C:085AH         LINE#         14
+  C:085DH         LINE#         15
+  C:0860H         LINE#         16
+  C:0865H         LINE#         17
+  C:0867H         LINE#         18
+  -------         ENDPROC       _DELAY
+  -------         PROC          FIRST
+  C:08BCH         LINE#         19
+  C:08BCH         LINE#         20
+  C:08BCH         LINE#         21
+  C:08BFH         LINE#         22
+  C:08BFH         LINE#         23
+  C:08BFH         LINE#         25
+  -------         ENDPROC       FIRST
+  -------         PROC          TOW
+  C:0868H         LINE#         27
+  C:0868H         LINE#         28
+  C:0868H         LINE#         29
+  C:0868H         LINE#         30
+  C:0868H         LINE#         31
+  C:086BH         LINE#         32
+  C:0872H         LINE#         33
+  C:0875H         LINE#         35
+  C:087CH         LINE#         36
+  -------         ENDPROC       TOW
+  -------         PROC          THIRD
+  C:08C1H         LINE#         38
+  C:08C1H         LINE#         39
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/28/2023  11:53:27  PAGE 3
+
+
+  C:08C1H         LINE#         40
+  C:08C1H         LINE#         41
+  C:08C1H         LINE#         43
+  -------         ENDPROC       THIRD
+  -------         PROC          FORTH
+  C:08B1H         LINE#         45
+  C:08B1H         LINE#         46
+  C:08B1H         LINE#         47
+  C:08B1H         LINE#         48
+  C:08B1H         LINE#         49
+  C:08B4H         LINE#         50
+  C:08B8H         LINE#         52
+  C:08BAH         LINE#         53
+  -------         ENDPROC       FORTH
+  -------         PROC          FIFTH
+  C:0893H         LINE#         55
+  C:0893H         LINE#         56
+  C:0893H         LINE#         57
+  C:0893H         LINE#         58
+  C:0893H         LINE#         59
+  C:0896H         LINE#         60
+  C:0896H         LINE#         61
+  C:0898H         LINE#         62
+  C:089BH         LINE#         63
+  C:089EH         LINE#         64
+  C:08A1H         LINE#         66
+  C:08A3H         LINE#         67
+  C:08A3H         LINE#         68
+  -------         ENDPROC       FIFTH
+  -------         PROC          SIX
+  -------         DO            
+  D:0005H         SYMBOL        LEDNUM
+  -------         ENDDO         
+  C:087EH         LINE#         70
+  C:087EH         LINE#         71
+  C:087EH         LINE#         72
+  C:0880H         LINE#         73
+  C:0880H         LINE#         74
+  C:0880H         LINE#         75
+  C:0883H         LINE#         76
+  C:0883H         LINE#         77
+  C:0886H         LINE#         78
+  C:0889H         LINE#         79
+  C:088CH         LINE#         82
+  C:088DH         LINE#         83
+  C:0891H         LINE#         84
+  C:0891H         LINE#         85
+  -------         ENDPROC       SIX
+  -------         PROC          SEVEN
+  -------         DO            
+  D:0005H         SYMBOL        LEDNUM1
+  -------         ENDDO         
+  C:0800H         LINE#         87
+  C:0800H         LINE#         88
+  C:0800H         LINE#         89
+  C:0802H         LINE#         90
+  C:0805H         LINE#         91
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/28/2023  11:53:27  PAGE 4
+
+
+  C:0805H         LINE#         92
+  C:0805H         LINE#         93
+  C:0808H         LINE#         94
+  C:0808H         LINE#         95
+  C:080BH         LINE#         96
+  C:080EH         LINE#         97
+  C:0811H         LINE#         99
+  C:0812H         LINE#         100
+  C:0818H         LINE#         101
+  C:081AH         LINE#         102
+  C:0828H         LINE#         103
+  C:0828H         LINE#         104
+  C:082BH         LINE#         105
+  C:082BH         LINE#         106
+  C:082EH         LINE#         107
+  C:0831H         LINE#         108
+  C:0834H         LINE#         110
+  C:0837H         LINE#         111
+  C:083BH         LINE#         112
+  C:083CH         LINE#         113
+  C:084AH         LINE#         114
+  C:084AH         LINE#         115
+  -------         ENDPROC       SEVEN
+  -------         PROC          MAIN
+  C:08C3H         LINE#         118
+  C:08C3H         LINE#         119
+  C:08C3H         LINE#         121
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FIRST?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TOW?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?THIRD?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FORTH?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FIFTH?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SIX?FIRST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SEVEN?FIRST
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00B8H BYTE ( 8%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=199
+LINK/LOCATE RUN COMPLETE.  7 WARNING(S),  0 ERROR(S)

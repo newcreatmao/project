@@ -1,0 +1,117 @@
+C51 COMPILER V9.54   GONNENG                                                               04/13/2023 19:50:35 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE GONNENG
+OBJECT MODULE PLACED IN .\Objects\gonneng.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE gonneng.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\gon
+                    -neng.lst) OBJECT(.\Objects\gonneng.obj)
+
+line level    source
+
+   1          #include <REG52.H>
+   2          
+   3          #include "QXA51.h"      
+   4          void timer0init(void)           //1毫秒@12.000MHz
+   5          {
+   6   1              TMOD &= 0xF0;           //设置定时器模式
+   7   1              TMOD |= 0x01;           //设置定时器模式
+   8   1              TL0 = 0x18;             //设置定时初始值
+   9   1              TH0 = 0xFC;             //设置定时初始值
+  10   1              TF0 = 0;                //清除TF0标志
+  11   1              TR0 = 1;                //定时器0开始计时
+  12   1              ET0=1;                  //1允许定时器中断
+  13   1              EA=1;                   //允许总中断
+  14   1              PT0=0;                  //中断优先级
+  15   1      }
+  16          
+  17          void timer0() interrupt 1
+  18          {
+  19   1              beep=1;
+  20   1      }
+  21          
+  22          
+  23          void delay(unsigned int x)              
+  24          {
+  25   1              while(x--)
+  26   1              {
+  27   2                      unsigned char i, j;
+  28   2                      i = 12;
+  29   2                      j = 169;
+  30   2                      do
+  31   2                      {
+  32   3                              while (--j);
+  33   3                      } while (--i);
+  34   2              }
+  35   1      }
+  36          
+  37          
+  38          void forward()
+  39          {
+  40   1              left_motor_en;
+  41   1              right_motor_en;
+  42   1              left_motor_go;
+  43   1              right_motor_go;
+  44   1      }
+  45          
+  46          void backward()
+  47          {
+  48   1              left_motor_en;
+  49   1              right_motor_en;
+  50   1              left_motor_back;
+  51   1              right_motor_back;
+  52   1      }
+  53          
+  54          void stop()
+C51 COMPILER V9.54   GONNENG                                                               04/13/2023 19:50:35 PAGE 2   
+
+  55          {
+  56   1              left_motor_stop;
+  57   1              right_motor_stop;
+  58   1      }
+  59          
+  60          void left()
+  61          {
+  62   1              left_motor_stop;
+  63   1              right_motor_en;
+  64   1              right_motor_go;
+  65   1      }
+  66          
+  67          void right()
+  68          {
+  69   1              right_motor_stop;
+  70   1              left_motor_en;
+  71   1              left_motor_go;
+  72   1      }
+  73          
+  74          void left_rapidly()
+  75          {
+  76   1              left_motor_en; 
+  77   1              right_motor_en;
+  78   1              right_motor_go;
+  79   1              left_motor_back;        
+  80   1      }
+  81          
+  82          void right_rapidly()
+  83          {
+  84   1              left_motor_en; 
+  85   1              right_motor_en;
+  86   1              left_motor_go;
+  87   1              right_motor_back;       
+  88   1      }
+  89          
+  90          
+  91          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    134    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

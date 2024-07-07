@@ -1,0 +1,49 @@
+C51 COMPILER V9.54   KEYS                                                                  04/19/2023 22:19:09 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE KEYS
+OBJECT MODULE PLACED IN .\Objects\KEYS.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE KEYS.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\KEYS
+                    -.lst) TABS(2) OBJECT(.\Objects\KEYS.obj)
+
+line level    source
+
+   1          #include <REG52.H>
+   2          #include "BASIC.H"
+   3          #include "HEAD.H"
+   4          #include "delay.h"
+   5          
+   6          
+   7          void key_s2_long()  //按下松开响音
+   8          { 
+   9   1        for(;;)
+  10   1        {
+  11   2          if(key_s2==0)
+  12   2          {
+  13   3            delayms(5);
+  14   3            if(key_s2==0)
+  15   3            {
+  16   4              while(key_s2==0);
+  17   4              delayms(10);
+  18   4              beep=0;
+  19   4              delayms(150);
+  20   4              beep=1;
+  21   4              break;
+  22   4            }
+  23   3          }
+  24   2        }
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     35    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

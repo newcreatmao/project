@@ -1,0 +1,98 @@
+C51 COMPILER V9.54   FUNCTION                                                              04/13/2023 20:01:12 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE FUNCTION
+OBJECT MODULE PLACED IN .\Objects\FUNCTION.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE FUNCTION.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\FU
+                    -NCTION.lst) OBJECT(.\Objects\FUNCTION.obj)
+
+line level    source
+
+   1          #include <REG52.H>
+   2          #include "HEAD.H"       
+   3          
+   4          void delay(unsigned int x)              
+   5          {
+   6   1              while(x--)
+   7   1              {
+   8   2                      unsigned char i, j;
+   9   2                      i = 12;
+  10   2                      j = 169;
+  11   2                      do
+  12   2                      {
+  13   3                              while (--j);
+  14   3                      } while (--i);
+  15   2              }
+  16   1      }
+  17          
+  18          
+  19          void forward()
+  20          {
+  21   1              left_motor_en;
+  22   1              right_motor_en;
+  23   1              left_motor_go;
+  24   1              right_motor_go;
+  25   1      }
+  26          
+  27          void backward()
+  28          {
+  29   1              left_motor_en;
+  30   1              right_motor_en;
+  31   1              left_motor_back;
+  32   1              right_motor_back;
+  33   1      }
+  34          
+  35          void stop()
+  36          {
+  37   1              left_motor_stop;
+  38   1              right_motor_stop;
+  39   1      }
+  40          
+  41          void left()
+  42          {
+  43   1              left_motor_stop;
+  44   1              right_motor_en;
+  45   1              right_motor_go;
+  46   1      }
+  47          
+  48          void right()
+  49          {
+  50   1              right_motor_stop;
+  51   1              left_motor_en;
+  52   1              left_motor_go;
+  53   1      }
+  54          
+C51 COMPILER V9.54   FUNCTION                                                              04/13/2023 20:01:12 PAGE 2   
+
+  55          void left_rapidly()
+  56          {
+  57   1              left_motor_en; 
+  58   1              right_motor_en;
+  59   1              right_motor_go;
+  60   1              left_motor_back;        
+  61   1      }
+  62          
+  63          void right_rapidly()
+  64          {
+  65   1              left_motor_en; 
+  66   1              right_motor_en;
+  67   1              left_motor_go;
+  68   1              right_motor_back;       
+  69   1      }
+  70          
+  71          
+  72          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    108    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

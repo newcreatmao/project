@@ -1,0 +1,167 @@
+C51 COMPILER V9.54   FIRST                                                                 07/03/2023 09:40:44 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE FIRST
+OBJECT MODULE PLACED IN .\Objects\first.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE first.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\first.lst) TABS(2) OBJECT(.\Objects\first.obj)
+
+line level    source
+
+   1          #include <REGX52.H>//有位声明
+*** WARNING C318 IN LINE 1 OF first.c: can't open file 'REGX52.H'
+   2          #include <INTRINS.H>//_nop_函数所在头文件
+   3          //全局变量的unsigned char 默认是0
+   4          void delay(unsigned int xms)//定义的延时x毫秒函数
+   5          {
+   6   1          while(xms)
+   7   1          {
+   8   2              unsigned char i, j;
+   9   2      
+  10   2              i = 2;
+  11   2              j = 239;
+  12   2              do
+  13   2              {
+  14   3                while (--j);
+  15   3              } while (--i);//定义的1ms的代码;
+  16   2              xms=xms-1;
+  17   2          }
+  18   1      }
+  19          void first()//点亮一个LED
+  20          {
+  21   1        P2=0xFE;  //1111 1110,给P2寄存器写入命令
+*** ERROR C202 IN LINE 21 OF first.c: 'P2': undefined identifier
+  22   1        while(1)
+  23   1        {
+  24   2          
+  25   2        };//令P2的指令不变
+  26   1      }
+  27          void tow()
+  28          {
+  29   1        while(1)
+  30   1        {
+  31   2          P2=0xFE;
+*** ERROR C202 IN LINE 31 OF first.c: 'P2': undefined identifier
+  32   2          delay(500);
+  33   2          P2=0xFF;//执行的速度快，导致看不出亮灭
+*** ERROR C202 IN LINE 33 OF first.c: 'P2': undefined identifier
+  34   2          //添加延时代码,可在stc软件的延时计数器里直接生成
+  35   2          delay(500);
+  36   2        }//让一个LED以一秒周期闪
+  37   1      }
+  38          void third()
+  39          {
+  40   1        while(1)
+  41   1        {
+  42   2          
+  43   2        }//流水灯,可用移位for来
+  44   1      }
+  45          void forth()
+  46          {
+  47   1        while(1)
+  48   1        {
+  49   2            if(P3_1==0)//一定要==
+*** ERROR C202 IN LINE 49 OF first.c: 'P3_1': undefined identifier
+C51 COMPILER V9.54   FIRST                                                                 07/03/2023 09:40:44 PAGE 2   
+
+  50   2                P2_0=0;//给予一个低电频
+*** ERROR C202 IN LINE 50 OF first.c: 'P2_0': undefined identifier
+  51   2            else
+  52   2              P2_0=1;//给予一个高电频
+*** ERROR C202 IN LINE 52 OF first.c: 'P2_0': undefined identifier
+  53   2        }//独立按键控制LED,按下点亮，松手熄灭
+  54   1      }
+  55          void fifth()
+  56          {
+  57   1        while(1)
+  58   1        {
+  59   2            if(P3_1==0)//一定要==
+*** ERROR C202 IN LINE 59 OF first.c: 'P3_1': undefined identifier
+  60   2            {
+  61   3              P2_0=0;
+*** ERROR C202 IN LINE 61 OF first.c: 'P2_0': undefined identifier
+  62   3              delay(20);
+  63   3              while(P3_1==0);//按下消抖
+*** ERROR C202 IN LINE 63 OF first.c: 'P3_1': undefined identifier
+  64   3              delay(20);//松手消抖
+  65   3              //给予一个低电频
+  66   3              P2_0=~P2_0;
+*** ERROR C202 IN LINE 66 OF first.c: 'P2_0': undefined identifier
+  67   3            }//给予一个高电频
+  68   2        }//独立按键控制LED,按下点亮，松手熄灭,按键消抖
+  69   1      }
+  70          void six()
+  71          {
+  72   1        unsigned char LEDNUM=0;//用字符型（二进制）可有效对应P2的寄存器数目
+  73   1        while(1)
+  74   1        {
+  75   2          if(P3_1==0)
+*** ERROR C202 IN LINE 75 OF first.c: 'P3_1': undefined identifier
+  76   2          {
+  77   3            delay(20);
+  78   3            while(P3_1==0);
+*** ERROR C202 IN LINE 78 OF first.c: 'P3_1': undefined identifier
+  79   3            delay(20);
+  80   3            
+  81   3            //P2刚开始默认全是1
+  82   3            LEDNUM++;
+  83   3            P2=~LEDNUM;//不改变LEDNUM的值
+*** ERROR C202 IN LINE 83 OF first.c: 'P2': undefined identifier
+  84   3          }
+  85   2        }//独立按键实现LED二进制
+  86   1      }
+  87          void seven ()
+  88          {
+  89   1        unsigned char LEDNUM1=0;//用字符型（二进制）可有效对应P2的寄存器数目
+  90   1        P2=~0x01;//初始化
+*** ERROR C202 IN LINE 90 OF first.c: 'P2': undefined identifier
+  91   1        while(1)
+  92   1        {
+  93   2          if(P3_1==0)
+*** ERROR C202 IN LINE 93 OF first.c: 'P3_1': undefined identifier
+  94   2          {
+  95   3            delay(20);
+  96   3            while(P3_1==0);
+*** ERROR C202 IN LINE 96 OF first.c: 'P3_1': undefined identifier
+  97   3            delay(20);
+  98   3            
+  99   3            LEDNUM1++;
+C51 COMPILER V9.54   FIRST                                                                 07/03/2023 09:40:44 PAGE 3   
+
+ 100   3            if(LEDNUM1>=8)
+ 101   3              LEDNUM1=0;
+ 102   3            P2=~(0x01<<LEDNUM1);//前进
+*** ERROR C202 IN LINE 102 OF first.c: 'P2': undefined identifier
+ 103   3          }
+ 104   2          if(P3_0==0)
+*** ERROR C202 IN LINE 104 OF first.c: 'P3_0': undefined identifier
+ 105   2          {
+ 106   3            delay(20);
+ 107   3            while(P3_1==0);
+*** ERROR C202 IN LINE 107 OF first.c: 'P3_1': undefined identifier
+ 108   3            delay(20);
+ 109   3            
+ 110   3            if(LEDNUM1==0)
+ 111   3              LEDNUM1=7;
+ 112   3            else LEDNUM1--;
+ 113   3            P2=~(0x01<<LEDNUM1);//倒退
+*** ERROR C202 IN LINE 113 OF first.c: 'P2': undefined identifier
+ 114   3          }
+ 115   2        }
+ 116   1      }//独立按键控制LED移位
+ 117            
+ 118          void main()//执行完后又重新执行
+ 119          {
+ 120   1        while(1)
+ 121   1        {
+ 122   2          unsigned char k=0;
+ 123   2          for(k=0;k<8;k++)
+ 124   2          {
+ 125   3            P1=~(0x01<<k);
+*** ERROR C202 IN LINE 125 OF first.c: 'P1': undefined identifier
+ 126   3            delay(500);
+ 127   3          }
+ 128   2        }
+ 129   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  21 ERROR(S)

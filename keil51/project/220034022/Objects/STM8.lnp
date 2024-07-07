@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\STM8" 
+PRINT(".\Listings\STM8.m51") RAMSIZE(256) 

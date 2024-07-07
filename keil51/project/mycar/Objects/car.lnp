@@ -1,0 +1,7 @@
+".\Objects\delay.obj",
+".\Objects\main.obj",
+".\Objects\user.obj",
+".\Objects\biuemain.obj" 
+TO ".\Objects\car" 
+PRINT(".\Listings\car.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

@@ -1,0 +1,181 @@
+C51 COMPILER V9.54   USER                                                                  02/19/2024 11:27:01 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE USER
+OBJECT MODULE PLACED IN .\Objects\user.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\keil\C51\BIN\C51.EXE user.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(
+                    -.\Listings\user.lst) TABS(2) OBJECT(.\Objects\user.obj)
+
+line level    source
+
+   1          #include "REG52.h"
+   2          #include "BASIC.h"
+   3          #include "HEAD.h"
+   4          #include "delay.h"
+   5          int sum;//超声波测距结果
+   6          unsigned int mark=1;
+   7          int kkkk=0;
+   8          unsigned int limit=15;//小车与障碍物的限制限制距离
+   9          unsigned char lochoice[9]={0x00,0xFE,0xFD,0xFB,0xF7,0xEF,0xDF,0xBF,0x7F};//由左到右
+  10          unsigned char displaynum[10]={0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F};//0-9
+  11          
+  12          int opration(int num)
+  13          {
+  14   1          
+  15   1        int n=0;
+  16   1        if(num==0)
+  17   1        {return 1;}
+  18   1        while(num)
+  19   1        {
+  20   2          num=num/10;
+  21   2          n++;
+  22   2        }
+  23   1      
+  24   1        return n;
+  25   1      }
+  26          
+  27          void display(int Data,int location)
+  28          {
+  29   1        int n=0;
+  30   1        int pp=0;
+  31   1        for(n=location+opration(Data)-1;n>=location;n--)
+  32   1      {
+  33   2        P0=0xFF;
+  34   2        WS=1;//打开位控
+  35   2        P0=lochoice[n];
+  36   2        WS=0;//关闭位控
+  37   2        
+  38   2        pp=0;
+  39   2        pp=Data%10;
+  40   2        Data/=10;
+  41   2        MS=1;//打开段控
+  42   2        P0=displaynum[pp];
+  43   2        MS=0;//关闭段控
+  44   2        delayms(2);
+  45   2      }
+  46   1      }
+  47          void xunji()
+  48          {
+  49   1        if(left_led==1 && right_led==1)
+  50   1          back_left();
+  51   1        if(left_led==1 && right_led==0)
+  52   1        {left();delayms(200);}
+  53   1        if(left_led==0 && right_led==1)
+  54   1        {right();delayms(200);}
+C51 COMPILER V9.54   USER                                                                  02/19/2024 11:27:01 PAGE 2   
+
+  55   1        if(left_led==0 && right_led==0)
+  56   1          forward();
+  57   1      }
+  58            
+  59          void opration1()
+  60          {
+  61   1        TMOD = 0x11;//设置定时器模式
+  62   1        TL1 = 0;//设置定时器初始值
+  63   1        TH1 = 0;//设置定时器初始值
+  64   1        
+  65   1        TRIG = 1;
+  66   1        Delay20us();//发射一段脉冲，至少20us
+  67   1        TRIG = 0;
+  68   1        while(!ECHO);//等待超声波模块返回脉冲
+  69   1        TR1=1;//打开定时器
+  70   1        while(ECHO);//等待超声波定时器返回脉冲结束
+  71   1        TR1 = 0;//停止计数器，计时结束
+  72   1        
+  73   1        sum=((TH1*256+TL1)*0.034)/2+1;//计算距离
+  74   1      }
+  75          void judge()
+  76          {
+  77   1        opration1();
+  78   1        if(limit<sum&&mark==1)
+  79   1        {forward();}
+  80   1        if(limit>sum&&mark==1)
+  81   1        {
+  82   2          back_left();
+  83   2          while(kkkk<100)
+  84   2          {
+  85   3          delayms(1);
+  86   3          kkkk++;
+  87   3          display(sum,5);
+  88   3          }
+  89   2        }
+  90   1        if(le_led==0&&rg_led==1)
+  91   1        {
+  92   2          if(mark==1)
+  93   2          {backward();delayms(500);}
+  94   2          right();
+  95   2          delayms(200);
+  96   2          mark=0;
+  97   2        }//直角右转
+  98   1        if(rg_led==0&&le_led==1)
+  99   1        {
+ 100   2          if(mark==1)
+ 101   2          {backward();delayms(500);}
+ 102   2          left();
+ 103   2          delayms(200);
+ 104   2          mark=0;
+ 105   2        }
+ 106   1          if(le_led==1&&rg_led==1&&mark==0)
+ 107   1          {
+ 108   2            forward();
+ 109   2            mark=1;
+ 110   2          }//直角左转
+ 111   1          if(le_led==0&&rg_led==0)
+ 112   1          {back_left();delayms(500);}
+ 113   1          kkkk=0;
+ 114   1          display(sum,5);
+ 115   1      }
+ 116          void magic_hand()
+C51 COMPILER V9.54   USER                                                                  02/19/2024 11:27:01 PAGE 3   
+
+ 117          {
+ 118   1        opration1();
+ 119   1        if(sum>limit&&mark==1)
+ 120   1        {forward();display(sum,5);}
+ 121   1        if(sum<limit&&mark==1)
+ 122   1        {backward();display(sum,5);}
+ 123   1        if(rg_led==0&&le_led==1)
+ 124   1        {
+ 125   2          right();
+ 126   2          mark=0;
+ 127   2        }
+ 128   1        if(le_led==0&&rg_led==1)
+ 129   1        {
+ 130   2          left();
+ 131   2          mark=0;
+ 132   2        }
+ 133   1        if(rg_led==1&&le_led==1)
+ 134   1        {mark=1;}
+ 135   1      }
+ 136          void key_begin()  //按下松开响音
+ 137          { 
+ 138   1        for(;;)
+ 139   1        {
+ 140   2          if(key2==0)
+ 141   2          {
+ 142   3            delayms(5);
+ 143   3            if(key2==0)
+ 144   3            { 
+ 145   4              delayms(10);
+ 146   4              beep=0;
+ 147   4              delayms(200);
+ 148   4              beep=1;
+ 149   4              break;
+ 150   4            }
+ 151   3          }
+ 152   2        }
+ 153   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    643    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     27       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

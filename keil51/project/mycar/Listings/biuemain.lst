@@ -1,0 +1,108 @@
+C51 COMPILER V9.54   BIUEMAIN                                                              07/20/2023 21:58:22 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE BIUEMAIN
+OBJECT MODULE PLACED IN .\Objects\biuemain.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE biuemain.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\user) DEBUG OBJE
+                    -CTEXTEND PRINT(.\Listings\biuemain.lst) TABS(2) OBJECT(.\Objects\biuemain.obj)
+
+line level    source
+
+   1          //#include <REGX52.H>
+   2          //#include"HEAD.h"
+   3          //#include"user.h"
+   4          //unsigned char pwmfl=180,pwmfg=180,pwmbl=180,pwmbg=180,basic1=180;
+   5          //unsigned char pwm_t=0;
+   6          //unsigned char redata;//接收的的数据变量
+   7          //void receive(unsigned char num)
+   8          //{
+   9          //  switch(num)
+  10          //  {
+  11          //    case '1':
+  12          //      forward();
+  13          //      break;
+  14          //    case '2':
+  15          //      backward();
+  16          //      break;
+  17          //    case '3':
+  18          //      tlf();
+  19          //      break;
+  20          //    case '4':
+  21          //      tgb();
+  22          //      break;
+  23          //    case '5':
+  24          //      tlb();
+  25          //      break;
+  26          //    case '6':
+  27          //      tgf();
+  28          //      break;
+  29          //    case '7':
+  30          //      basic1+=5;
+  31          //      reward();
+  32          //      break;
+  33          //    case '8':
+  34          //      basic1-=5;
+  35          //      reward();
+  36          //      break;
+  37          //    case '9':
+  38          //      look_road();
+  39          //      break;
+  40          //  }
+  41          //}
+  42          //void Uart_Init()//9600bps@11.0592
+  43          //{
+  44          //  PCON=0x00;//关倍频
+  45          //  SCON=0x50;//8位数据，可变波特率
+  46          //  TMOD &= 0x0F; //设置定时器模式
+  47          //  TMOD |= 0x20;
+  48          //  TL1=0xFD;//设置定时初始值
+  49          //  TH1=0xFD;
+  50          //  //禁止定时器1中断
+  51          //  ET1=0;
+  52          //  //定时器1开始计时
+  53          //  TR1=1;
+  54          //  EA=1;//总中断
+C51 COMPILER V9.54   BIUEMAIN                                                              07/20/2023 21:58:22 PAGE 2   
+
+  55          //  ES=1;//打开串口中断
+  56          //}
+  57          
+  58          //void main()
+  59          //{
+  60          //  timer();
+  61          //  Uart_Init();
+  62          //  while(1);
+  63          //}
+  64          //  
+  65          //void Uart_Routine() interrupt 4
+  66          //{
+  67          //  stop();
+  68          //  RI=0;//清除中断标志位
+  69          //  redata=SBUF;//
+  70          //  receive(redata);
+  71          //} 
+  72          //void pwm() interrupt 1
+  73          //{
+  74          //    TL0 = 0xA4;   //设置定时初始值
+  75          //    TH0 = 0xFF; 
+  76          //    pwm_t++;
+  77          //    if(pwm_t==255)  {pwm_t=efl=efg=ebl=ebg=0;}
+  78          //    if(pwm_t==pwmfl){efl=1;}
+  79          //    if(pwm_t==pwmfg){efg=1;}
+  80          //    if(pwm_t==pwmbl){ebl=1;}
+  81          //    if(pwm_t==pwmbg){ebg=1;}
+  82          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

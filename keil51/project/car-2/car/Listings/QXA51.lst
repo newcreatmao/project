@@ -1,0 +1,142 @@
+C51 COMPILER V9.54   QXA51                                                                 04/13/2023 19:13:18 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE QXA51
+OBJECT MODULE PLACED IN .\Objects\QXA51.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE QXA51.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\QXA51
+                    -.lst) OBJECT(.\Objects\QXA51.obj)
+
+line level    source
+
+   1          #include <REG52.H>
+   2          
+   3          #define left_motor_en           EN1=1
+   4          #define left_motor_go           IN1=0,IN2=1
+   5          #define left_motor_back         IN1=1,IN2=0
+   6          #define left_motor_stop         IN1=0,IN2=0
+   7          
+   8          #define right_motor_en          EN2=1
+   9          #define right_motor_go          IN3=1,IN4 =0
+  10          #define right_motor_back        IN3=0,IN4 =1
+  11          #define right_motor_stop        IN3=0,IN4 =0    
+  12          
+  13          
+  14          void timer0init(void)           //1毫秒@12.000MHz
+  15          {
+  16   1              TMOD &= 0xF0;           //设置定时器模式
+  17   1              TMOD |= 0x01;           //设置定时器模式
+  18   1              TL0 = 0x18;             //设置定时初始值
+  19   1              TH0 = 0xFC;             //设置定时初始值
+  20   1              TF0 = 0;                //清除TF0标志
+  21   1              TR0 = 1;                //定时器0开始计时
+  22   1              ET0=1;                  //1允许定时器中断
+  23   1              EA=1;                   //允许总中断
+  24   1              PT0=0;                  //中断优先级
+  25   1      }
+  26          
+  27          void timer0() interrupt 1
+  28          {
+  29   1              return 0;
+*** ERROR C174 IN LINE 29 OF QXA51.c: return-expression on void-function
+  30   1      }
+  31          
+  32          
+  33          void delay(unsigned int x)              
+  34          {
+  35   1              while(x--)
+  36   1              {
+  37   2                      unsigned char i, j;
+  38   2                      i = 12;
+  39   2                      j = 169;
+  40   2                      do
+  41   2                      {
+  42   3                              while (--j);
+  43   3                      } while (--i);
+  44   2              }
+  45   1      }
+  46          
+  47          
+  48          void forward()
+  49          {
+  50   1              left_motor_en;
+*** ERROR C202 IN LINE 50 OF QXA51.c: 'EN1': undefined identifier
+  51   1              right_motor_en;
+*** ERROR C202 IN LINE 51 OF QXA51.c: 'EN2': undefined identifier
+C51 COMPILER V9.54   QXA51                                                                 04/13/2023 19:13:18 PAGE 2   
+
+  52   1              left_motor_go;
+*** ERROR C202 IN LINE 52 OF QXA51.c: 'IN1': undefined identifier
+  53   1              right_motor_go;
+*** ERROR C202 IN LINE 53 OF QXA51.c: 'IN3': undefined identifier
+  54   1      }
+  55          
+  56          void backward()
+  57          {
+  58   1              left_motor_en;
+*** ERROR C202 IN LINE 58 OF QXA51.c: 'EN1': undefined identifier
+  59   1              right_motor_en;
+*** ERROR C202 IN LINE 59 OF QXA51.c: 'EN2': undefined identifier
+  60   1              left_motor_back;
+*** ERROR C202 IN LINE 60 OF QXA51.c: 'IN1': undefined identifier
+  61   1              right_motor_back;
+*** ERROR C202 IN LINE 61 OF QXA51.c: 'IN3': undefined identifier
+  62   1      }
+  63          
+  64          void stop()
+  65          {
+  66   1              left_motor_stop;
+*** ERROR C202 IN LINE 66 OF QXA51.c: 'IN1': undefined identifier
+  67   1              right_motor_stop;
+*** ERROR C202 IN LINE 67 OF QXA51.c: 'IN3': undefined identifier
+  68   1      }
+  69          
+  70          void left()
+  71          {
+  72   1              left_motor_stop;
+*** ERROR C202 IN LINE 72 OF QXA51.c: 'IN1': undefined identifier
+  73   1              right_motor_en;
+*** ERROR C202 IN LINE 73 OF QXA51.c: 'EN2': undefined identifier
+  74   1              right_motor_go;
+*** ERROR C202 IN LINE 74 OF QXA51.c: 'IN3': undefined identifier
+  75   1      }
+  76          
+  77          void right()
+  78          {
+  79   1              right_motor_stop;
+*** ERROR C202 IN LINE 79 OF QXA51.c: 'IN3': undefined identifier
+  80   1              left_motor_en;
+*** ERROR C202 IN LINE 80 OF QXA51.c: 'EN1': undefined identifier
+  81   1              left_motor_go;
+*** ERROR C202 IN LINE 81 OF QXA51.c: 'IN1': undefined identifier
+  82   1      }
+  83          
+  84          void left_rapidly()
+  85          {
+  86   1              left_motor_en; 
+*** ERROR C202 IN LINE 86 OF QXA51.c: 'EN1': undefined identifier
+  87   1              right_motor_en;
+*** ERROR C202 IN LINE 87 OF QXA51.c: 'EN2': undefined identifier
+  88   1              right_motor_go;
+*** ERROR C202 IN LINE 88 OF QXA51.c: 'IN3': undefined identifier
+  89   1              left_motor_back;        
+*** ERROR C202 IN LINE 89 OF QXA51.c: 'IN1': undefined identifier
+  90   1      }
+  91          
+  92          void right_rapidly()
+  93          {
+  94   1              left_motor_en; 
+*** ERROR C202 IN LINE 94 OF QXA51.c: 'EN1': undefined identifier
+C51 COMPILER V9.54   QXA51                                                                 04/13/2023 19:13:18 PAGE 3   
+
+  95   1              right_motor_en;
+*** ERROR C202 IN LINE 95 OF QXA51.c: 'EN2': undefined identifier
+  96   1              left_motor_go;
+*** ERROR C202 IN LINE 96 OF QXA51.c: 'IN1': undefined identifier
+  97   1              right_motor_back;       
+*** ERROR C202 IN LINE 97 OF QXA51.c: 'IN3': undefined identifier
+  98   1      }
+  99          
+ 100          
+ 101          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  25 ERROR(S)

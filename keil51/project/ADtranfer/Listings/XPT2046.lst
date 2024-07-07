@@ -1,0 +1,59 @@
+C51 COMPILER V9.54   XPT2046                                                               07/18/2023 11:56:07 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE XPT2046
+OBJECT MODULE PLACED IN .\Objects\XPT2046.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE XPT2046.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\user;..\LCD1602驱
+                    -动代码) DEBUG OBJECTEXTEND PRINT(.\Listings\XPT2046.lst) TABS(2) OBJECT(.\Objects\XPT2046.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          sbit XPT2046_CS=P3^5;
+   4          sbit XPT2046_DCLK=P3^6;
+   5          sbit XPT2046_DIN=P3^4;
+   6          sbit XPT2046_DOUT=P3^7;
+   7          
+   8          unsigned int READ(unsigned char command)//根据时序图操作
+   9          {
+  10   1        int i;
+  11   1        unsigned int value;
+  12   1        XPT2046_CS=0;
+  13   1        XPT2046_DCLK=0;
+  14   1        for(i=0;i<8;i++)
+  15   1        {
+  16   2        XPT2046_DIN=command&(0x80>>i);//逐位发送
+  17   2        
+  18   2        XPT2046_DCLK=1;//将修高位发送
+  19   2        //注意时间,ns可满足
+  20   2        XPT2046_DCLK=0;
+  21   2        }
+  22   1        for(i=0;i<16;i++)
+  23   1        {
+  24   2        XPT2046_DCLK=1;//将修高位发送
+  25   2        //注意时间,ns可满足
+  26   2        XPT2046_DCLK=0;
+  27   2          if(XPT2046_DOUT){value|=(0x8000>>i);}//读16位
+  28   2        }
+  29   1        XPT2046_DCLK=1;//结束时序
+  30   1        if(command&0x08)
+  31   1        return value>>8;//数据8位，但为了精确渎至16位，再移回去，0-255
+  32   1        else
+  33   1        return value>>4;//数据12位，0-4096
+  34   1      }
+  35          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    124    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,94 @@
+C51 COMPILER V9.54   MAIN                                                                  06/30/2023 10:29:42 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          unsigned char kk[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0xFF,0x6F};//定义所有的数字形状
+   3          void delay(unsigned int xms)//定义的延时x毫秒函数
+   4          {
+   5   1          while(xms)
+   6   1          {
+   7   2              unsigned char i, j;
+   8   2      
+   9   2              i = 2;
+  10   2              j = 239;
+  11   2              do
+  12   2              {
+  13   3                while (--j);
+  14   3              } while (--i);//定义的1ms的代码;
+  15   2              xms=xms-1;
+  16   2          }
+  17   1      }
+  18          void towtoten(unsigned char location,unsigned char *x)
+  19          {
+  20   1        int i=0;
+  21   1        for(i=0;i<3;i++)
+  22   1        {
+  23   2          *(x+i)=location%2;
+  24   2          location/=2;
+  25   2        }
+  26   1      }
+  27          void children(unsigned char location,number)//定义子函数
+  28          {
+  29   1        unsigned char m[3];
+  30   1        /*switch(location)
+  31   1        {
+  32   1          case 1: P2_4=1;P2_3=1;P2_2=1;break;
+  33   1          case 2: P2_4=1;P2_3=1;P2_2=0;break;
+  34   1          case 3: P2_4=1;P2_3=0;P2_2=1;break;
+  35   1          case 4: P2_4=1;P2_3=0;P2_2=0;break;
+  36   1          case 5: P2_4=0;P2_3=1;P2_2=1;break;
+  37   1          case 6: P2_4=0;P2_3=1;P2_2=0;break;
+  38   1          case 7: P2_4=0;P2_3=0;P2_2=1;break;
+  39   1          case 8: P2_4=0;P2_3=0;P2_2=0;break;
+  40   1        }*/
+  41   1        towtoten(location,m);
+  42   1        P2_4=m[2];P2_3=m[1];P2_2=m[0];
+  43   1        P0=kk[number];
+  44   1        delay(1);
+  45   1        P0=0x00;//清零
+  46   1      }//点亮一个
+  47          void light()
+  48          {
+  49   1        //P2_4=1;
+  50   1        //P2_3=0;
+  51   1        //P2_2=1;//二进制转十进制选中LED6
+  52   1        //P0=0x7D;//将数据输入LED6，使其显示6
+  53   1        while(1)
+  54   1        {
+C51 COMPILER V9.54   MAIN                                                                  06/30/2023 10:29:42 PAGE 2   
+
+  55   2          children(1,7);//7
+  56   2          children(2,6);//6
+  57   2          children(3,5);//5
+  58   2          children(4,4);//4
+  59   2          children(5,3);//3
+  60   2          children(6,2);//2
+  61   2          children(7,1);//1
+  62   2          children(8,0);//8
+  63   2        }
+  64   1      }//点亮数码管
+  65          void main()
+  66          {
+  67   1        light();
+  68   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    191    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10      10
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

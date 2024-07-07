@@ -1,0 +1,8 @@
+".\Objects\delay.obj",
+".\Objects\main.obj",
+".\Objects\shuma.obj",
+".\Objects\color.obj",
+".\Objects\chuangkou.obj",
+".\Objects\link.obj" 
+TO ".\Objects\tryone" 
+PRINT(".\Listings\tryone.m51") RAMSIZE(256) 

@@ -1,0 +1,10 @@
+Build target 'Target 1'
+compiling note.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER_INIT?NOTE
+
+Program Size: data=9.0 xdata=0 code=21
+creating hex file from ".\Objects\try"...
+".\Objects\try" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:01

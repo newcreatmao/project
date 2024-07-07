@@ -1,0 +1,1 @@
+"gonneng.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\gonneng.lst) OBJECT(.\Objects\gonneng.obj)

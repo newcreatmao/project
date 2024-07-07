@@ -1,0 +1,170 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/30/2023  10:29:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\51PROJECT\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\shuma1 PRINT (.\Listings\shuma1.m51) RAMSIZE (256)
+>> 
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  D:\51PROJECT\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\shuma1 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?MAIN
+            DATA    0012H     0008H     UNIT         _DATA_GROUP_
+            IDATA   001AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0049H     UNIT         ?PR?LIGHT?MAIN
+            CODE    00D8H     0032H     UNIT         ?PR?_CHILDREN?MAIN
+            CODE    010AH     0029H     UNIT         ?PR?_TOWTOTEN?MAIN
+            CODE    0133H     0022H     UNIT         ?C?LIB_CODE
+            CODE    0155H     0018H     UNIT         ?PR?_DELAY?MAIN
+            CODE    016DH     000DH     UNIT         ?C_INITSEG
+            CODE    017AH     0003H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\shuma1 (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?LIGHT?MAIN
+
+?PR?LIGHT?MAIN                 -----    -----
+  +--> ?PR?_CHILDREN?MAIN
+
+?PR?_CHILDREN?MAIN             0012H    0005H
+  +--> ?PR?_TOWTOTEN?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/30/2023  10:29:42  PAGE 2
+
+
+  +--> ?PR?_DELAY?MAIN
+
+?PR?_TOWTOTEN?MAIN             0017H    0003H
+
+?PR?_DELAY?MAIN                0017H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\shuma1 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:010AH         PUBLIC        _towtoten
+  C:0155H         PUBLIC        _delay
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  B:00A0H.4       PUBLIC        P2_4
+  C:008FH         PUBLIC        light
+  C:017AH         PUBLIC        main
+  C:00D8H         PUBLIC        _children
+  D:0008H         PUBLIC        kk
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0017H         SYMBOL        i
+  D:0018H         SYMBOL        j
+  -------         ENDDO         
+  C:0155H         LINE#         3
+  C:0155H         LINE#         4
+  C:0155H         LINE#         5
+  C:0159H         LINE#         6
+  C:0159H         LINE#         9
+  C:015CH         LINE#         10
+  C:015FH         LINE#         12
+  C:015FH         LINE#         13
+  C:0162H         LINE#         14
+  C:0165H         LINE#         15
+  C:016AH         LINE#         16
+  C:016CH         LINE#         17
+  -------         ENDPROC       _DELAY
+  -------         PROC          _TOWTOTEN
+  D:0007H         SYMBOL        location
+  D:0017H         SYMBOL        x
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:010AH         LINE#         18
+  C:0110H         LINE#         19
+  C:0110H         LINE#         20
+  C:0113H         LINE#         21
+  C:0113H         LINE#         22
+  C:0113H         LINE#         23
+  C:0123H         LINE#         24
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/30/2023  10:29:42  PAGE 3
+
+
+  C:0127H         LINE#         25
+  C:0132H         LINE#         26
+  -------         ENDPROC       _TOWTOTEN
+  -------         PROC          _CHILDREN
+  D:0007H         SYMBOL        location
+  D:0012H         SYMBOL        number
+  -------         DO            
+  D:0014H         SYMBOL        m
+  -------         ENDDO         
+  C:00D8H         LINE#         27
+  C:00DCH         LINE#         28
+  C:00DCH         LINE#         41
+  C:00E5H         LINE#         42
+  C:00F7H         LINE#         43
+  C:00FFH         LINE#         44
+  C:0106H         LINE#         45
+  C:0109H         LINE#         46
+  -------         ENDPROC       _CHILDREN
+  -------         PROC          LIGHT
+  C:008FH         LINE#         47
+  C:008FH         LINE#         48
+  C:008FH         LINE#         53
+  C:008FH         LINE#         54
+  C:008FH         LINE#         55
+  C:0098H         LINE#         56
+  C:00A1H         LINE#         57
+  C:00AAH         LINE#         58
+  C:00B3H         LINE#         59
+  C:00BCH         LINE#         60
+  C:00C5H         LINE#         61
+  C:00CEH         LINE#         62
+  C:00D6H         LINE#         63
+  -------         ENDPROC       LIGHT
+  -------         PROC          MAIN
+  C:017AH         LINE#         65
+  C:017AH         LINE#         66
+  C:017AH         LINE#         67
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?CSTOPTR
+  C:0133H         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+Program Size: data=27.0 xdata=0 code=381
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

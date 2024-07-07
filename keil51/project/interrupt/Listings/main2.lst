@@ -1,0 +1,56 @@
+C51 COMPILER V9.54   MAIN2                                                                 07/09/2023 12:36:15 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN2
+OBJECT MODULE PLACED IN .\Objects\main2.obj
+COMPILER INVOKED BY: D:\51project\Keil_v5\C51\BIN\C51.EXE main2.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\user) DEBUG OBJECTE
+                    -XTEND PRINT(.\Listings\main2.lst) TABS(2) OBJECT(.\Objects\main2.obj)
+
+line level    source
+
+   1          /*#include <REGX52.H>
+   2          #include"delay.h"
+   3          sbit LED=P2^0;
+   4          
+   5          int main ()
+   6          {
+   7            unsigned char time,i;
+   8            while(1)
+   9            {
+  10              for(time=0;time<100;time+=5)
+  11              {
+  12                for(i=0;i<20;i++)
+  13                {
+  14              LED=0;
+  15              delayms(time);
+  16              LED=1;
+  17              delayms(100-time);//延时和为定值即周期固定，占空比即为两时间的比值
+  18                }
+  19            }}
+  20                for(time=0;time<100;time+=5)
+  21              {
+  22                for(i=0;i<20;i++)
+  23                {
+  24              LED=1;
+  25              delayms(time);
+  26              LED=0;
+  27              delayms(100-time);//延时和为定值即周期固定，占空比即为两时间的比值
+  28                }
+  29            }}
+  30          
+  31          }
+  32          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

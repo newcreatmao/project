@@ -1,0 +1,123 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mao maozhiquan, no, LIC=9WSKC-7VTCK-RAMDM-XQH06-ICFL5-TUJTE
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\51project\Keil_v5\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+D:\51project\stm32\32工程文件\use\USER\use.uvprojx
+Project File Date:  01/23/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\51project\Keil_v5\keil\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_cec.c...
+compiling stm32f10x_crc.c...
+compiling misc.c...
+compiling core_cm3.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_wwdg.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_usart.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_tim.c...
+compiling SDuse.c...
+SDuse.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+SDuse.c(14): warning:  #223-D: function "SD_CS" declared implicitly
+  		SD_CS(OFF);//片选SD，低电平使能
+SDuse.c(14): error:  #20: identifier "OFF" is undefined
+  		SD_CS(OFF);//片选SD，低电平使能
+SDuse.c(17): warning:  #223-D: function "SD_SPI_ReadWriteByte" declared implicitly
+  		if(SD_SPI_ReadWriteByte(0XFF)==0XFF)return 0;//OK
+SDuse.c(20): warning:  #223-D: function "SD_DisSelect" declared implicitly
+  		SD_DisSelect(); //释放总线
+SDuse.c(33): warning:  #223-D: function "SD_SPI_ReadWriteByte" declared implicitly
+  		while ((SD_SPI_ReadWriteByte(0XFF)!=0xFE)&&Count)Count--;//等待得到读取数据令牌0xfe
+SDuse.c(34): error:  #20: identifier "MSD_RESPONSE_FAILURE" is undefined
+  		if (Count==0) return MSD_RESPONSE_FAILURE;//获取令牌失败,返回0XFF
+SDuse.c(41): warning:  #223-D: function "SD_SPI_ReadWriteByte" declared implicitly
+  SD_SPI_ReadWriteByte(0xFF);
+SDuse.c(55): warning:  #223-D: function "SD_SPI_ReadWriteByte" declared implicitly
+  		while ((SD_SPI_ReadWriteByte(0XFF)!=0xFF)&&Count)Count--;//等待SD卡准备好
+SDuse.c(56): error:  #20: identifier "MSD_RESPONSE_FAILURE" is undefined
+  		if (Count==0) return MSD_RESPONSE_FAILURE;//SD卡未准备好，失败，返回
+SDuse.c(57): warning:  #223-D: function "SD_SPI_ReadWriteByte" declared implicitly
+  		SD_SPI_ReadWriteByte(cmd);//发送数据起始或停止令牌
+SDuse.c(64): error:  #20: identifier "MSD_DATA_WRITE_ERROR" is undefined
+  		if((t&0x1F)!=0x05)return MSD_DATA_WRITE_ERROR;//写入错误
+SDuse.c(71): warning:  #1-D: last line of file ends without a newline
+  * 进入参数 : cmd：命令 arg：命令参数crc：
+SDuse.c(68): error:  #6: comment unclosed at end of file
+  /*******************************************************************************
+SDuse.c: 9 warnings, 5 errors
+compiling main.c...
+..\OBJ\Sys.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\OBJ\main.c: 1 warning, 0 errors
+compiling system_stm32f10x.c...
+compiling Delay.c...
+compiling I2C.c...
+..\MYFUNTIONS\I2C.c(91): warning:  #1-D: last line of file ends without a newline
+  }
+..\MYFUNTIONS\I2C.c: 1 warning, 0 errors
+compiling stm32f10x_it.c...
+compiling SPI.c...
+SPI.c(32): error:  #20: identifier "SPI_InitStructure" is undefined
+  		SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex; //双线双向全双工
+SPI.c(98): error:  #20: identifier "SPI_InitStructure" is undefined
+  		SPI_InitStructure.SPI_BaudRatePrescaler = SpeedSet ;
+SPI.c(103): warning:  #1-D: last line of file ends without a newline
+  /******************************END OF INIT_SPI*****************************/
+SPI.c: 1 warning, 2 errors
+compiling OLED.c...
+".\Objects\frist-project.axf" - 7 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\51project\Keil_v5\keil\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
