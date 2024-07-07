@@ -1,0 +1,106 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mao maozhiquan, no, LIC=9WSKC-7VTCK-RAMDM-XQH06-ICFL5-TUJTE
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\51project\Keil_v5\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+D:\51project\³ÌÐòÔ´Âë\text\USER\SD.uvprojx
+Project File Date:  03/08/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\51project\Keil_v5\keil\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling led.c...
+compiling key.c...
+compiling spi.c...
+compiling main.c...
+use.h(17): warning:  #1295-D: Deprecated declaration Lock_show - give arg types
+  void Lock_show();
+use.h(19): warning:  #1295-D: Deprecated declaration SD_rw - give arg types
+  void SD_rw();
+use.h(20): warning:  #1295-D: Deprecated declaration ReadSD - give arg types
+  void ReadSD();
+use.h(22): warning:  #1295-D: Deprecated declaration SD_Init - give arg types
+  void SD_Init();
+main.c: 4 warnings, 0 errors
+compiling system_stm32f10x.c...
+compiling use.c...
+use.h(17): warning:  #1295-D: Deprecated declaration Lock_show - give arg types
+  void Lock_show();
+use.h(19): warning:  #1295-D: Deprecated declaration SD_rw - give arg types
+  void SD_rw();
+use.h(20): warning:  #1295-D: Deprecated declaration ReadSD - give arg types
+  void ReadSD();
+use.h(22): warning:  #1295-D: Deprecated declaration SD_Init - give arg types
+  void SD_Init();
+use.c(6): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			LCD_ShowString(60,210,200,16,16,Serial_RxPacket);
+use.c(160): warning:  #177-D: variable "file"  was declared but never referenced
+  		FIL file;
+use.c(162): warning:  #177-D: variable "Bw"  was declared but never referenced
+  		UINT Bw;
+use.c(183): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			LCD_ShowString(60,230,200,16,16,Serial_RxPacket);
+use.c(184): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			LCD_ShowString(60,90,200,16,strlen(Read_data),Read_data);
+use.c(195): warning:  #1-D: last line of file ends without a newline
+  }
+use.c: 10 warnings, 0 errors
+compiling MMC_SD.C...
+compiling stm32f10x_it.c...
+assembling startup_stm32f10x_hd.s...
+compiling delay.c...
+compiling usart.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling sys.c...
+compiling lcd.c...
+compiling misc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_spi.c...
+compiling malloc.c...
+compiling exfuns.c...
+compiling core_cm3.c...
+compiling diskio.c...
+compiling fattester.c...
+compiling flash.c...
+compiling cc936.c...
+compiling ff.c...
+linking...
+Program Size: Code=41728 RO-data=181820 RW-data=108 ZI-data=17868  
+FromELF: creating hex file...
+"..\OBJ\SD.axf" - 0 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\51project\Keil_v5\keil\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
