@@ -1,0 +1,9 @@
+".\Objects\main.obj",
+".\Objects\red.obj",
+".\Objects\basic.obj",
+".\Objects\delay.obj",
+".\Objects\xunji.obj",
+".\Objects\LCD1602.obj" 
+TO ".\Objects\try" 
+PRINT(".\Listings\try.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

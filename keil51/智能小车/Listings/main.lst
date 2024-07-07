@@ -1,0 +1,109 @@
+C51 COMPILER V9.54   MAIN                                                                  04/21/2023 16:20:54 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "basic.h"
+   3          #include"delay.h"
+   4          #include"LCD1602.h"
+   5          
+   6          sbit EN1A = P1^5;
+   7          sbit EN1B = P0^4;//L298N使能引脚
+   8          
+   9          unsigned char count;//计数器
+  10          unsigned char speech=20;//速度
+  11          void prepare ()
+  12          {
+  13   1        ET0 = 1;//定时器0中断允许开关
+  14   1        EA = 1;//定时器总开关
+  15   1        PT0 =0;//定时器0中断优先级
+  16   1      }
+  17          void init()//100微秒@11。0592MHZ
+  18          {
+  19   1        TMOD &= 0xF0;//设置定时器模式
+  20   1        TMOD |= 0x01;//设置定时器模式
+  21   1        TL0 = 0xA4;//设置定时器初始值
+  22   1        TH0 = 0xFF;//设置定时器初始值
+  23   1        TF0 = 0;//消除TF0标志
+  24   1        TR0 = 1;//定时器0开始计时
+  25   1        prepare();
+  26   1      }//定时器中断初处理
+  27          void go ()
+  28          {
+  29   1        car_lf_go();
+  30   1        car_rg_go();
+  31   1      }
+  32          void main ()
+  33          {
+  34   1        myinit();
+  35   1        init();
+  36   1        mystring(1,1,"myspeech");
+  37   1        while(1)
+  38   1        {
+  39   2        if(P3_1==0)
+  40   2        {
+  41   3            delayms(20);
+  42   3            while(P3_1==0);
+  43   3            delayms(20);
+  44   3            speech++;
+  45   3        }
+  46   2        if(P3_2=0)
+*** WARNING C276 IN LINE 46 OF main.c: constant in condition expression
+  47   2        {
+  48   3            delayms(20);
+  49   3            while(P3_1==0);
+  50   3            delayms(20);
+  51   3            speech--;
+  52   3        }
+  53   2        go();
+C51 COMPILER V9.54   MAIN                                                                  04/21/2023 16:20:54 PAGE 2   
+
+  54   2        }
+  55   1        mychar(2,2,speech);
+  56   1        //一边高一边低，高低电平，形成电流，就可以转动
+  57   1        //正转倒转用前后赋值来控制
+  58   1        //判断车轮位置可一个个输入01来判断
+  59   1      }
+  60          
+  61          void mywant () interrupt 1 //中断函数，1为定时器0中断模式
+  62          {
+  63   1        TL0 = 0xA4;
+  64   1        TH0 = 0xFF;//定时器回归初始值
+  65   1        count++;
+  66   1        if(count >=100)
+  67   1        {
+  68   2          count=0;
+  69   2        }//时间计数器，100为周期
+  70   1        if(count<speech)
+  71   1        {
+  72   2          EN1A = 1;
+  73   2          EN1B = 1;//使能引脚，1供能，0断能
+  74   2        }
+  75   1        else
+  76   1        {
+  77   2          EN1A = 0;
+  78   2          EN1B = 0;
+  79   2        }
+  80   1      }
+*** WARNING C294 IN LINE 48 OF main.c: unreachable code
+*** WARNING C294 IN LINE 55 OF main.c: unreachable code
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    125    ----
+   CONSTANT SIZE    =      9    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)

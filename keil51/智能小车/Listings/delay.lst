@@ -1,0 +1,51 @@
+C51 COMPILER V9.54   DELAY                                                                 04/21/2023 16:20:54 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN .\Objects\delay.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE ..\user\delay.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\delay.lst) TABS(2) OBJECT(.\Objects\delay.obj)
+
+line level    source
+
+   1          #include<intrins.h>
+   2          void delayms(unsigned int xms)//定义的延时x毫秒函数
+   3          {
+   4   1          while(xms)
+   5   1          {
+   6   2              unsigned char i, j;
+   7   2      
+   8   2              i = 2;
+   9   2              j = 239;
+  10   2              do
+  11   2              {
+  12   3                while (--j);
+  13   3              } while (--i);//定义的1ms的代码;
+  14   2              xms=xms-1;
+  15   2          }
+  16   1      }
+  17          
+  18          void delayus(unsigned int xus)
+  19          {
+  20   1        while(xus>0)
+  21   1        {
+  22   2         _nop_();
+  23   2         _nop_();
+  24   2         _nop_();
+  25   2         xus--;
+  26   2        }
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     44    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,1 @@
+"pwn.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\pwn.lst) TABS (2) OBJECT(.\Objects\pwn.obj)

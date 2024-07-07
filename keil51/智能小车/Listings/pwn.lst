@@ -1,0 +1,50 @@
+C51 COMPILER V9.54   PWN                                                                   03/11/2023 18:51:56 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE PWN
+OBJECT MODULE PLACED IN .\Objects\pwn.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE pwn.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\pwn.l
+                    -st) TABS(2) OBJECT(.\Objects\pwn.obj)
+
+line level    source
+
+   1          //#include <REGX51.H>
+   2          //sbit IN11 = P0^5;//左前轮点
+   3          //sbit IN12 = P0^6;
+   4          
+   5          //sbit IN13 = P0^3;//右前轮
+   6          //sbit IN14 = P0^4;
+   7          
+   8          //sbit IN21 = P3^5;//左后轮
+   9          //sbit IN22 = P3^6;
+  10          
+  11          //sbit IN23 = P3^3;//右后轮
+  12          //sbit IN24 = P3^4;
+  13          
+  14          //sbit EN1A = P0^7;
+  15          //sbit EN1B = P0^2;
+  16          //sbit EN2A = P3^7;
+  17          //sbit EN2B = P3^2;
+  18          
+  19          //void Timer0Init(void)   //100微秒@11.0592MHz
+  20          //{
+  21          //  TMOD &= 0xF0;   //设置定时器模式
+  22          //  TL0 = 0xAE;   //设置定时初始值
+  23          //  TH0 = 0xFB;   //设置定时初始值
+  24          //  TF0 = 0;    //清除TF0标志
+  25          //  TR0 = 1;    //定时器0开始计时
+  26          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

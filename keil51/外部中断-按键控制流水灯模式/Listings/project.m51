@@ -1,0 +1,200 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/07/2023  11:55:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delay.obj, .\Objects\EX0.obj TO .\Objects\project PRINT (.\Lis
+>> tings\project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\Delay.obj (DELAY)
+  .\Objects\EX0.obj (EX0)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?MAIN
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     004FH     UNIT         ?PR?EX0_ISR?MAIN
+            CODE    08DBH     0037H     UNIT         ?PR?LED_1?MAIN
+            CODE    0912H     0037H     UNIT         ?PR?LED_0?MAIN
+            CODE    0949H     0014H     UNIT         ?PR?MAIN?MAIN
+            CODE    095DH     0011H     UNIT         ?PR?_DELAY?DELAY
+            CODE    096EH     0007H     UNIT         ?PR?EX0_INIT?EX0
+            CODE    0975H     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?EX0_ISR?MAIN
+  +--> ?PR?_DELAY?DELAY
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/07/2023  11:55:20  PAGE 2
+
+
+  +--> ?PR?EX0_INIT?EX0
+  +--> ?PR?LED_0?MAIN
+  +--> ?PR?LED_1?MAIN
+
+?PR?LED_0?MAIN
+  +--> ?PR?_DELAY?DELAY
+
+?PR?LED_1?MAIN
+  +--> ?PR?_DELAY?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:0008H         PUBLIC        Mode
+  B:00B0H.2       PUBLIC        P3_2
+  C:088CH         PUBLIC        EX0_ISR
+  C:0949H         PUBLIC        main
+  C:0912H         PUBLIC        LED_0
+  C:08DBH         PUBLIC        LED_1
+  D:0009H         PUBLIC        i
+  -------         PROC          LED_1
+  C:08DBH         LINE#         8
+  C:08DBH         LINE#         9
+  C:08DBH         LINE#         11
+  C:08E2H         LINE#         12
+  C:08E2H         LINE#         13
+  C:08E7H         LINE#         14
+  C:08EAH         LINE#         15
+  C:08EEH         LINE#         16
+  C:08FEH         LINE#         17
+  C:0903H         LINE#         18
+  C:0905H         LINE#         20
+  C:0905H         LINE#         21
+  C:090CH         LINE#         22
+  C:090DH         LINE#         23
+  C:090DH         LINE#         25
+  C:0911H         LINE#         26
+  -------         ENDPROC       LED_1
+  -------         PROC          LED_0
+  C:0912H         LINE#         29
+  C:0912H         LINE#         30
+  C:0912H         LINE#         31
+  C:0919H         LINE#         32
+  C:0919H         LINE#         33
+  C:091EH         LINE#         34
+  C:0921H         LINE#         35
+  C:0925H         LINE#         36
+  C:0935H         LINE#         37
+  C:093AH         LINE#         38
+  C:093CH         LINE#         40
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/07/2023  11:55:20  PAGE 3
+
+
+  C:093CH         LINE#         41
+  C:0943H         LINE#         42
+  C:0944H         LINE#         43
+  C:0944H         LINE#         45
+  C:0948H         LINE#         46
+  -------         ENDPROC       LED_0
+  -------         PROC          MAIN
+  C:0949H         LINE#         48
+  C:0949H         LINE#         49
+  C:0949H         LINE#         51
+  C:094CH         LINE#         53
+  C:094CH         LINE#         54
+  C:094CH         LINE#         55
+  C:0953H         LINE#         56
+  C:095BH         LINE#         57
+  -------         ENDPROC       MAIN
+  -------         PROC          EX0_ISR
+  C:088CH         LINE#         60
+  C:08A9H         LINE#         62
+  C:08ACH         LINE#         63
+  C:08B1H         LINE#         64
+  C:08B4H         LINE#         65
+  C:08B9H         LINE#         69
+  C:08C0H         LINE#         74
+  C:08C0H         LINE#         76
+  -------         ENDPROC       EX0_ISR
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:095DH         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        xms
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0005H         SYMBOL        j
+  -------         ENDDO         
+  C:095DH         LINE#         2
+  C:095DH         LINE#         3
+  C:095DH         LINE#         5
+  C:0963H         LINE#         6
+  C:0963H         LINE#         8
+  C:0965H         LINE#         9
+  C:0967H         LINE#         11
+  C:0967H         LINE#         12
+  C:0969H         LINE#         13
+  C:096BH         LINE#         14
+  C:096DH         LINE#         15
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        EX0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A8H.7       PUBLIC        EA
+  C:096EH         PUBLIC        EX0_Init
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/07/2023  11:55:20  PAGE 4
+
+
+  -------         PROC          EX0_INIT
+  C:096EH         LINE#         3
+  C:096EH         LINE#         4
+  C:096EH         LINE#         6
+  C:0970H         LINE#         7
+  C:0972H         LINE#         8
+  C:0974H         LINE#         9
+  -------         ENDPROC       EX0_INIT
+  -------         ENDMOD        EX0
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00EFH BYTE (11%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=383
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

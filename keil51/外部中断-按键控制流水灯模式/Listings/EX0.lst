@@ -1,0 +1,33 @@
+C51 COMPILER V9.54   EX0                                                                   03/07/2023 11:40:48 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE EX0
+OBJECT MODULE PLACED IN .\Objects\EX0.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE EX0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\EX0.l
+                    -st) TABS(2) OBJECT(.\Objects\EX0.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          void EX0_Init(void)
+   4          {
+   5   1            //设置触发方式 外部中断0
+   6   1        IT0=1;  //设置下降沿触发TCON 硬件可自动清零触发信号
+   7   1        EX0=1; //IE
+   8   1        EA=1;
+   9   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      7    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

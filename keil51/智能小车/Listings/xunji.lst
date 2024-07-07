@@ -1,0 +1,73 @@
+C51 COMPILER V9.54   XUNJI                                                                 04/21/2023 16:20:54 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE XUNJI
+OBJECT MODULE PLACED IN .\Objects\xunji.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE xunji.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\xun
+                    -ji.lst) TABS(2) OBJECT(.\Objects\xunji.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "basic.h"
+   3          #include <intrins.h>
+   4          #include "delay.h"
+   5          
+   6          sbit Dl = P2^7;
+   7          sbit Dr = P2^6;//1为黑（即光反射回来），0为白
+   8          
+   9          void car_go()
+  10          {
+  11   1        car_lf_go();
+  12   1        car_rg_go();
+  13   1      }
+  14          
+  15          void xunji()
+  16          { 
+  17   1        if(Dl==1&&Dr==1)
+  18   1        {car_go();}
+  19   1        if(Dl==1&&Dr==0)//中间左侧检测到黑线，偏左，向右调
+  20   1        {
+  21   2          car_lf_go();
+  22   2          if(Dl==0&&Dr==0)//回正小车后
+  23   2          {car_go();}//保持直线
+  24   2        }
+  25   1        if(Dl==0&&Dr==1)
+  26   1        {
+  27   2          car_rg_go();
+  28   2          if(Dl==0&&Dr==0)//回正小车后
+  29   2          {car_go();}//保持直线
+  30   2        }
+  31   1        /*直角转弯
+  32   1        if(Dl1==0&&Dl2==0&&Dr1==1&&Dr2==1)
+  33   1        {
+  34   1        car_go();
+  35   1        delayms(50);
+  36   1        if(Dl1==0&&Dl2==0&&Dr1==0&&Dr2==0)//全白
+  37   1        {
+  38   1        car_lf_stop();
+  39   1        car_rg_stop();
+  40   1        delayms(50);//保护电机
+  41   1        car_rg_go();
+  42   1        }
+  43   1        }//直角左拐
+  44   1      */
+  45   1      /*锐角拐弯
+  46   1      */
+  47   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     52    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.54   XUNJI                                                                 04/21/2023 16:20:54 PAGE 2   
+
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
