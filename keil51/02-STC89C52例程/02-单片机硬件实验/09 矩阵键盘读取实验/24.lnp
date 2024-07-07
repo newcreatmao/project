@@ -1,0 +1,5 @@
+"STARTUP.obj",
+"main.obj",
+"use'.obj" 
+TO "24" 
+RAMSIZE(256) 

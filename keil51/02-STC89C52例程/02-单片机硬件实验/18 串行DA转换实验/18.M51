@@ -1,0 +1,224 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/17/2017  16:17:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, main.obj TO 18 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  main.obj (MAIN)
+
+
+LINK MAP OF MODULE:  18 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0080H     UNIT         ?CO?MAIN
+            CODE    0083H     003BH     UNIT         ?PR?_OUTPUT_CHANNEL?MAIN
+            CODE    00BEH     0033H     UNIT         ?PR?MAIN?MAIN
+            CODE    00F1H     0028H     UNIT         ?PR?_DAC?MAIN
+            CODE    0119H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0125H     000AH     UNIT         ?PR?_WRITE_RNG?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   18 (?C_STARTUP)
+
+
+SEGMENT                            DATA_GROUP 
+  +--> CALLED SEGMENT            START    LENGTH
+------------------------------------------------
+?C_C51STARTUP                    -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                    0008H    0002H
+  +--> ?PR?_OUTPUT_CHANNEL?MAIN
+  +--> ?PR?_WRITE_RNG?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?_DAC?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  18 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0119H         SEGMENT       ?C_C51STARTUP
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  16:17:39  PAGE 2
+
+
+  I:000AH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:011CH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0119H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0119H         LINE#         133
+  C:011BH         LINE#         134
+  C:011CH         LINE#         135
+  C:011DH         LINE#         136
+  C:011FH         LINE#         185
+  C:0122H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+  B:00A0H.3       PUBLIC        LDAC
+  D:00B8H         PUBLIC        IP
+  B:00A0H.2       PUBLIC        LOAD
+  D:00D8H         PUBLIC        CCON
+  C:00BEH         PUBLIC        main
+  B:00A0H.0       PUBLIC        SCLK
+  B:00A0H.1       PUBLIC        Data_in
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0003H         PUBLIC        tab
+  C:00F1H         PUBLIC        _DAC
+  C:0083H         PUBLIC        _Output_channel
+  C:0125H         PUBLIC        _Write_RNG
+  D:00D0H         PUBLIC        PSW
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  16:17:39  PAGE 3
+
+
+  -------         PROC          _DAC
+  D:0006H         SYMBOL        DA_DATA
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0002H         SYMBOL        a
+  D:0002H         SYMBOL        temp
+  -------         ENDDO         
+  C:00F1H         LINE#         34
+  C:00F1H         LINE#         35
+  C:00F1H         LINE#         40
+  C:00F3H         LINE#         41
+  C:00F5H         LINE#         42
+  C:00F5H         LINE#         43
+  C:00F7H         LINE#         45
+  C:00FAH         LINE#         46
+  C:00FEH         LINE#         47
+  C:0102H         LINE#         49
+  C:0104H         LINE#         51
+  C:0106H         LINE#         53
+  C:010FH         LINE#         54
+  C:0110H         LINE#         55
+  C:0114H         LINE#         56
+  C:0116H         LINE#         57
+  C:0118H         LINE#         58
+  -------         ENDPROC       _DAC
+  -------         PROC          _OUTPUT_CHANNEL
+  D:0007H         SYMBOL        channel
+  -------         DO            
+  D:0007H         SYMBOL        i
+  -------         ENDDO         
+  C:0083H         LINE#         62
+  C:0083H         LINE#         63
+  C:0083H         LINE#         65
+  C:0091H         LINE#         66
+  C:0091H         LINE#         67
+  C:0093H         LINE#         68
+  C:0093H         LINE#         69
+  C:0095H         LINE#         70
+  C:0097H         LINE#         71
+  C:0099H         LINE#         72
+  C:009EH         LINE#         73
+  C:009EH         LINE#         74
+  C:00A0H         LINE#         75
+  C:00A2H         LINE#         76
+  C:00A2H         LINE#         77
+  C:00A2H         LINE#         78
+  C:00A2H         LINE#         79
+  C:00A2H         LINE#         80
+  C:00A4H         LINE#         81
+  C:00A6H         LINE#         82
+  C:00A8H         LINE#         83
+  C:00AAH         LINE#         84
+  C:00ACH         LINE#         85
+  C:00AEH         LINE#         86
+  C:00B0H         LINE#         87
+  C:00B1H         LINE#         88
+  C:00B3H         LINE#         89
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  16:17:39  PAGE 4
+
+
+  C:00B5H         LINE#         90
+  C:00B7H         LINE#         91
+  C:00B9H         LINE#         92
+  C:00BBH         LINE#         93
+  C:00BDH         LINE#         94
+  C:00BDH         LINE#         95
+  C:00BDH         LINE#         96
+  C:00BDH         LINE#         97
+  -------         ENDPROC       _OUTPUT_CHANNEL
+  -------         PROC          _WRITE_RNG
+  D:0007H         SYMBOL        RNG_value
+  C:0125H         LINE#         101
+  C:0125H         LINE#         102
+  C:0125H         LINE#         103
+  C:0127H         LINE#         104
+  C:012CH         LINE#         105
+  C:012EH         LINE#         106
+  -------         ENDPROC       _WRITE_RNG
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        j
+  -------         ENDDO         
+  C:00BEH         LINE#         108
+  C:00BEH         LINE#         109
+  C:00BEH         LINE#         110
+  C:00C3H         LINE#         111
+  C:00C3H         LINE#         112
+  C:00C3H         LINE#         113
+  C:00C5H         LINE#         114
+  C:00C7H         LINE#         115
+  C:00CCH         LINE#         116
+  C:00D1H         LINE#         117
+  C:00DFH         LINE#         118
+  C:00E3H         LINE#         119
+  C:00EFH         LINE#         120
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=11.0 xdata=0 code=303
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,373 @@
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\51project\Keil_v5\keil\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\16 并行AD转换实
+                    -验) DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          ///***************************************************************************
+   2          //实验名称： 并行AD转换实验
+   3          
+   4          //实验模块:  51单片机核心板、LED示区、并行A/D转换区
+   5          
+   6          //实验接线：  51单片机核心板------并行A/D转换区
+   7          //           P0   ---------  J36
+   8          //           P2.0 --------- START
+   9          //           P2.1 --------- EOC  
+  10          //           P2.2 --------- OE 
+  11          //           P2.3 --------- ALE
+  12          //           
+  13          //      51单片机核心板------LED示区
+  14          //           P1  ---------  J4  
+  15          //            
+  16          //现象描述：  转换结果直接以二进制形式在LED上显示。可调节电位器改变输入的模拟量
+  17          
+  18          //更新时间：  2017.10.17
+  19          //***************************************************************************/
+  20          
+  21          //#include <reg52.H>
+  22          
+  23          //sbit START = P2^0;
+  24          //sbit EOC = P2^1;
+  25          //sbit OE  = P2^2;
+  26          //sbit CLK = P2^3;
+  27          //unsigned char getdata;
+  28          
+  29          ///************************************************/
+  30          ////定时器初始化
+  31          //void init()
+  32          //{
+  33          //        TMOD= 0x03;// 定时器0工作方式3
+  34          //        TH0 = 0xff;// 定时器0赋初值
+  35          //        TL0 = 0x00;
+  36          //        TR0 = 1;
+  37          //        ET0 = 1;
+  38          //        EA  = 1;
+  39          //}
+  40          
+  41          ///***********************************************/
+  42          ////软件延时产生ADC0809的时钟
+  43          //void clk() interrupt 1
+  44          //{ 
+  45          //        CLK=(~CLK);
+  46          //}
+  47          
+  48          
+  49          ///************************************************/
+  50          ////AD转换函数
+  51          //unsigned char ADC()
+  52          //    {
+  53          //         char value;
+  54          //     START=0; 
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 2   
+
+  55          //     START=1;      //开始转换命令
+  56          //     START=0;
+  57          //     while(EOC==0);//等待转换结束
+  58          //     OE=1;
+  59          //     value=P0;
+  60          //     OE=0;
+  61          //         return value;
+  62          //     }
+  63          
+  64          
+  65          ///************************************************/
+  66          //void main()
+  67          //{
+  68          //    init();
+  69          //    START = 1;       // ST端产生正脉冲
+  70          //    START = 0;
+  71          //    while(1)
+  72          //  {
+  73          //    P1=~ADC();//输出转换得到的数据
+  74          //  }
+  75          //}
+  76          
+  77          
+  78          #include <REGX51.H>
+  79          
+  80          sbit START = P2^0;
+  81          sbit EOC = P2^1;
+  82          sbit OE  = P2^2;
+  83          sbit CLK = P2^3;
+  84          unsigned int getdata;
+  85          int u,t=0,mod,k=0;
+  86          unsigned char locate[]={0,0,0};
+  87          sbit add_a = P1^0;
+  88          sbit add_b = P1^1;
+  89          sbit add_c = P1^2;
+  90          
+  91          unsigned char digivalue[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7f,0x6f};
+  92          unsigned char digorder[]={0xBF,0x86,0xDB,0xCF,0xE6,0xED,0xFD,0x87,0xFf,0xCf};
+  93          unsigned char locate[3];
+  94          /************************************************/
+  95          
+  96          
+  97          //定时器初始化
+  98          void init()
+  99          {
+ 100   1        TMOD &= 0xF0;     //设置定时器模式
+ 101   1        TMOD |= 0x03;// 定时器0工作方式3
+ 102   1        TH0 = 0xff;// 定时器0赋初值
+ 103   1        TL0 = 0x00;
+ 104   1        TR0 = 1;
+ 105   1        ET0 = 1;
+ 106   1        PT0 = 1;
+ 107   1      }
+ 108          
+ 109          void Timer1_Init(void)    //1毫秒@12.000MHz
+ 110          {
+ 111   1        TMOD &= 0x0F;     //设置定时器模式
+ 112   1        TMOD |= 0x10;     //设置定时器模式
+ 113   1        TL1 = 0x20;       //设置定时初始值
+ 114   1        TH1 = 0xD1;       //设置定时初始值
+ 115   1        TF1 = 1;        //清除TF1标志
+ 116   1        TR1 = 1;        //定时器1开始计时
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 3   
+
+ 117   1        ET1 = 1;
+ 118   1      }
+ 119          
+ 120          /***********************************************/
+ 121          //软件延时产生ADC0809的时钟
+ 122          void clk() interrupt 1
+ 123          { 
+ 124   1            CLK=(~CLK);
+ 125   1      }
+ 126          
+ 127          
+ 128          /************************************************/
+ 129          //AD转换函数
+ 130          void ADC(int i)
+ 131          {
+ 132   1          char value;
+ 133   1        
+ 134   1          add_a=i%2;
+ 135   1          i=i/2;
+ 136   1          add_b=i%2;
+ 137   1          i=i/2;
+ 138   1          add_c=i%2;
+ 139   1          
+ 140   1          P1_3 = ~add_a;
+ 141   1          P1_4 = ~add_b;
+ 142   1          P1_5 = ~add_c;
+ 143   1        
+ 144   1           START=0;
+ 145   1           START=1;      //开始转换命令
+ 146   1           START=0;
+ 147   1           while(EOC==0){ OE=1;};//等待转换结束
+ 148   1          
+ 149   1           getdata=P0;
+ 150   1           value=getdata;
+ 151   1           getdata=getdata*1.96;
+ 152   1           if(getdata<=2){
+ 153   2             mod=1;
+ 154   2           }
+ 155   1           else{
+ 156   2             mod=0;
+ 157   2           }
+ 158   1           OE=0;
+ 159   1           locate[0]=getdata%10;
+ 160   1           locate[1]=getdata/10%10;
+ 161   1           locate[2]=getdata/100%10;
+ 162   1      }
+ 163          
+ 164          void use() interrupt 3
+ 165          {
+ 166   1        TL1 = 0x20;       //设置定时初始值
+ 167   1        TH1 = 0xD1;       //设置定时初始值
+ 168   1        t++;
+ 169   1        if(t>=10000){
+ 170   2          t=0;
+ 171   2          k++;
+ 172   2          k=k%8;
+ 173   2          ADC(k);
+ 174   2          if(mod==1){
+ 175   3            P1_6=0;
+ 176   3          }
+ 177   2          else if(mod==0){
+ 178   3            P1_6=1;
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 4   
+
+ 179   3          }
+ 180   2        }
+ 181   1      }
+ 182          
+ 183          void delay() //延迟函数，决定数码管跳变的间隔时间
+ 184          { 
+ 185   1        unsigned char ii=200; //若发现数码管闪烁，调节这里即可
+ 186   1        while(ii--);
+ 187   1      }
+ 188          /************************************************/
+ 189          void main()
+ 190          {
+ 191   1          int i=0;
+ 192   1          init();
+ 193   1          Timer1_Init();
+ 194   1          EA  = 1;
+ 195   1          START = 1;       // ST端产生正脉冲
+ 196   1          START = 0;
+ 197   1          while(1)
+ 198   1        {
+ 199   2            P2_5=0;P2_6=0;P2_7=1;
+ 200   2            P3=0x00;
+ 201   2            P3=digorder[locate[2]];   //显示i
+ 202   2            delay();
+ 203   2            
+ 204   2            P2_5=0;P2_6=1;P2_7=0;
+ 205   2            P3=0x00;
+ 206   2            P3=digivalue[locate[1]];  //显示i
+ 207   2            delay();
+ 208   2          
+ 209   2            P2_5=1;P2_6=0;P2_7=0;
+ 210   2            P3=0x00;
+ 211   2            P3=digivalue[locate[0]];  //显示i
+ 212   2            delay();
+ 213   2        }
+ 214   1      }
+ 215          
+ 216          
+ 217          //#include <REGX51.H>
+ 218          
+ 219          //sbit START = P2^0;
+ 220          //sbit EOC = P2^1;
+ 221          //sbit OE  = P2^2;
+ 222          //sbit CLK = P2^3;
+ 223          //unsigned int getdata;
+ 224          //int u,t=0,mod;
+ 225          //unsigned char locate[]={0,0,0};
+ 226          
+ 227          //unsigned char digivalue[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7f,0x6f};
+ 228          //unsigned char digorder[]={0xBF,0x86,0xDB,0xCF,0xE6,0xED,0xFD,0x87,0xFf,0xCf};
+ 229          //unsigned char locate[3];
+ 230          ///************************************************/
+ 231          
+ 232          
+ 233          ////定时器初始化
+ 234          //void init()
+ 235          //{
+ 236          //    TMOD &= 0xF0;            //设置定时器模式
+ 237          //  TMOD |= 0x03;// 定时器0工作方式3
+ 238          //  TH0 = 0xff;// 定时器0赋初值
+ 239          //  TL0 = 0x00;
+ 240          //  TR0 = 1;
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 5   
+
+ 241          //  ET0 = 1;
+ 242          //    PT0 = 1;
+ 243          //}
+ 244          
+ 245          //void Timer1_Init(void)        //1毫秒@12.000MHz
+ 246          //{
+ 247          //    TMOD &= 0x0F;            //设置定时器模式
+ 248          //    TMOD |= 0x10;            //设置定时器模式
+ 249          //    TL1 = 0x20;                //设置定时初始值
+ 250          //    TH1 = 0xD1;                //设置定时初始值
+ 251          //    TF1 = 1;                //清除TF1标志
+ 252          //    TR1 = 1;                //定时器1开始计时
+ 253          //    ET1 = 1;
+ 254          //}
+ 255          
+ 256          ///***********************************************/
+ 257          ////软件延时产生ADC0809的时钟
+ 258          //void clk() interrupt 1
+ 259          //{ 
+ 260          //      CLK=(~CLK);
+ 261          //}
+ 262          
+ 263          
+ 264          ///************************************************/
+ 265          ////AD转换函数
+ 266          //unsigned char ADC()
+ 267          //{
+ 268          //    char value;
+ 269          //         START=0; 
+ 270          //         START=1;      //开始转换命令
+ 271          //         START=0;
+ 272          //         while(EOC==0);//等待转换结束
+ 273          //         OE=1;
+ 274          //         getdata=P0;
+ 275          //       value=getdata;
+ 276          //         if(getdata>=0x40){
+ 277          //             mod=1;
+ 278          //         }
+ 279          //         else{
+ 280          //             mod=0;
+ 281          //         }
+ 282          //         getdata=getdata*1.96;
+ 283          //         OE=0;
+ 284          //         locate[0]=getdata%10;
+ 285          //         locate[1]=getdata/10%10;
+ 286          //         locate[2]=getdata/100%10;
+ 287          //     return value;
+ 288          //}
+ 289          
+ 290          //void use() interrupt 3
+ 291          //{
+ 292          //    char use;
+ 293          //    TL1 = 0x20;                //设置定时初始值
+ 294          //    TH1 = 0xD1;                //设置定时初始值
+ 295          //    t++;
+ 296          //    if(t>=10000){
+ 297          //        t=0;
+ 298          //        use=ADC();
+ 299          //        if(mod==1){
+ 300          //            P1=~use;
+ 301          //        }
+ 302          //        else if(mod==0){
+C51 COMPILER V9.54   MAIN                                                                  06/19/2024 12:23:08 PAGE 6   
+
+ 303          //            P1=0xff;
+ 304          //        }
+ 305          //    }
+ 306          //}
+ 307          
+ 308          //void delay() //延迟函数，决定数码管跳变的间隔时间
+ 309          //{ 
+ 310          //    unsigned char ii=200; //若发现数码管闪烁，调节这里即可
+ 311          //    while(ii--);
+ 312          //}
+ 313          ///************************************************/
+ 314          //void main()
+ 315          //{
+ 316          //        int i=0;
+ 317          //    init();
+ 318          //      Timer1_Init();
+ 319          //        EA  = 1;
+ 320          //    START = 1;       // ST端产生正脉冲
+ 321          //    START = 0;
+ 322          //    while(1)
+ 323          //    {
+ 324          //            P2_5=0;P2_6=0;P2_7=1;
+ 325          //            P3=0x00;
+ 326          //            P3=digorder[locate[2]];     //显示i
+ 327          //          delay();
+ 328          //            
+ 329          //            P2_5=0;P2_6=1;P2_7=0;
+ 330          //            P3=0x00;
+ 331          //            P3=digivalue[locate[1]];     //显示i
+ 332          //            delay();
+ 333          //        
+ 334          //            P2_5=1;P2_6=0;P2_7=0;
+ 335          //            P3=0x00;
+ 336          //            P3=digivalue[locate[0]];     //显示i
+ 337          //            delay();
+ 338          //    }
+ 339          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    474    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     33       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

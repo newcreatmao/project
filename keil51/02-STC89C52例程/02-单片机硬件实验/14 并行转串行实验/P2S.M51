@@ -1,0 +1,135 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/17/2017  15:33:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE P2S.obj TO P2S
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  P2S.obj (P2S)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  P2S (P2S)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001FH     UNIT         ?PR?_MDELAY?P2S
+            CODE    0022H     0018H     UNIT         ?PR?RECEIVE?P2S
+            CODE    003AH     000FH     UNIT         ?PR?MAIN?P2S
+            CODE    0049H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   P2S (P2S)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?P2S
+
+?PR?MAIN?P2S
+  +--> ?PR?RECEIVE?P2S
+
+
+
+SYMBOL TABLE OF MODULE:  P2S (P2S)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        P2S
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  15:33:58  PAGE 2
+
+
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+  B:0090H.2       PUBLIC        SF
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:003AH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0090H.1       PUBLIC        SDA
+  B:0090H.0       PUBLIC        CLK
+  C:0003H         PUBLIC        _mDelay
+  C:0022H         PUBLIC        receive
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _MDELAY
+  D:0006H         SYMBOL        Delay
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         32
+  C:0003H         LINE#         33
+  C:0003H         LINE#         34
+  C:000CH         LINE#         35
+  C:0021H         LINE#         36
+  -------         ENDPROC       _MDELAY
+  -------         PROC          RECEIVE
+  -------         DO            
+  D:0007H         SYMBOL        byte
+  D:0006H         SYMBOL        c
+  -------         ENDDO         
+  C:0022H         LINE#         38
+  C:0022H         LINE#         39
+  C:0022H         LINE#         40
+  C:0024H         LINE#         41
+  C:0025H         LINE#         42
+  C:0025H         LINE#         43
+  C:0029H         LINE#         44
+  C:002BH         LINE#         45
+  C:002DH         LINE#         46
+  C:0030H         LINE#         47
+  C:0033H         LINE#         48
+  C:0035H         LINE#         51
+  C:0039H         LINE#         52
+  C:0039H         LINE#         53
+  -------         ENDPROC       RECEIVE
+  -------         PROC          MAIN
+  -------         DO            
+  D:0007H         SYMBOL        a
+  -------         ENDDO         
+  C:003AH         LINE#         56
+  C:003AH         LINE#         57
+  C:003AH         LINE#         58
+  C:003CH         LINE#         59
+  C:003CH         LINE#         60
+  C:003CH         LINE#         61
+  C:003EH         LINE#         62
+  C:0040H         LINE#         63
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  15:33:58  PAGE 3
+
+
+  C:0042H         LINE#         64
+  C:0045H         LINE#         65
+  C:0047H         LINE#         67
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        P2S
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MDELAY?P2S
+
+Program Size: data=9.0 xdata=0 code=85
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

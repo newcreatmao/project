@@ -1,0 +1,163 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/17/2017  20:51:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE steep.obj TO steep
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  steep.obj (STEEP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  steep (STEEP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0025H     UNIT         ?PR?_MDELAY?STEEP
+            CODE    0028H     0022H     UNIT         ?PR?FF_SETP?STEEP
+            CODE    004AH     0022H     UNIT         ?PR?BW_SETP?STEEP
+            CODE    006CH     001CH     UNIT         ?PR?MAIN?STEEP
+            CODE    0088H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   steep (STEEP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?STEEP
+
+?PR?MAIN?STEEP
+  +--> ?PR?FF_SETP?STEEP
+  +--> ?PR?BW_SETP?STEEP
+  +--> ?PR?_MDELAY?STEEP
+
+?PR?FF_SETP?STEEP
+  +--> ?PR?_MDELAY?STEEP
+
+?PR?BW_SETP?STEEP
+  +--> ?PR?_MDELAY?STEEP
+
+
+
+SYMBOL TABLE OF MODULE:  steep (STEEP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  20:51:24  PAGE 2
+
+
+
+  -------         MODULE        STEEP
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:006CH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0080H.0       PUBLIC        ap
+  B:0080H.2       PUBLIC        bp
+  B:0080H.1       PUBLIC        cp
+  B:0080H.3       PUBLIC        dp
+  C:0009H         PUBLIC        _mDelay
+  B:0080H.4       PUBLIC        tp
+  C:0028H         PUBLIC        ff_setp
+  C:004AH         PUBLIC        bw_setp
+  D:00D0H         PUBLIC        PSW
+  C:0005H         SYMBOL        L?0018
+  -------         PROC          L?0017
+  -------         ENDPROC       L?0017
+  C:0005H         SYMBOL        L?0018
+  -------         PROC          _MDELAY
+  D:0006H         SYMBOL        Delay
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0009H         LINE#         32
+  C:0009H         LINE#         33
+  C:0009H         LINE#         35
+  C:0012H         LINE#         36
+  C:0027H         LINE#         37
+  -------         ENDPROC       _MDELAY
+  -------         PROC          FF_SETP
+  C:0028H         LINE#         39
+  C:0028H         LINE#         40
+  C:0028H         LINE#         41
+  C:002AH         LINE#         42
+  C:002CH         LINE#         43
+  C:002EH         LINE#         44
+  C:002EH         LINE#         45
+  C:0031H         LINE#         46
+  C:0033H         LINE#         47
+  C:0035H         LINE#         48
+  C:0038H         LINE#         49
+  C:003AH         LINE#         50
+  C:003CH         LINE#         51
+  C:003FH         LINE#         52
+  C:0041H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  20:51:24  PAGE 3
+
+
+  C:0043H         LINE#         54
+  -------         ENDPROC       FF_SETP
+  -------         PROC          BW_SETP
+  C:004AH         LINE#         57
+  C:004AH         LINE#         58
+  C:004AH         LINE#         59
+  C:004CH         LINE#         60
+  C:004EH         LINE#         61
+  C:0050H         LINE#         62
+  C:0052H         LINE#         63
+  C:0055H         LINE#         64
+  C:0057H         LINE#         65
+  C:0057H         LINE#         66
+  C:005AH         LINE#         67
+  C:005CH         LINE#         68
+  C:005EH         LINE#         69
+  C:0061H         LINE#         70
+  C:0063H         LINE#         71
+  C:0065H         LINE#         72
+  -------         ENDPROC       BW_SETP
+  -------         PROC          MAIN
+  C:006CH         LINE#         76
+  C:006CH         LINE#         77
+  C:006CH         LINE#         78
+  C:006EH         LINE#         79
+  C:0070H         LINE#         80
+  C:0072H         LINE#         81
+  C:0074H         LINE#         83
+  C:0074H         LINE#         84
+  C:0074H         LINE#         85
+  C:0077H         LINE#         86
+  C:007CH         LINE#         88
+  C:007FH         LINE#         89
+  C:0086H         LINE#         91
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        STEEP
+
+Program Size: data=9.0 xdata=0 code=148
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
