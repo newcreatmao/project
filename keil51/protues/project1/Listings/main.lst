@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 16:15:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: D:\51project\Keil_v5\keil\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJ
+                      ECT(.\Objects\main.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     MAIN:
+0000 75A001            2     MOV 0xA0, #01B
+0003 12000F            3     LCALL DELAY
+0006 75A000            4     MOV 0xA0, #00B
+0009 12000F            5     LCALL DELAY
+000C 020000            6     LJMP MAIN
+                       7      
+000F 7FFF              8     DELAY:  MOV R7,#255             
+0011                   9     D1:
+0011 00               10             NOP
+0012 C030             11             PUSH 30H
+0014 C031             12             PUSH 31H
+0016 753002           13             MOV 30H,#2
+0019 7531C2           14             MOV 31H,#194
+001C                  15     NEXT:
+001C D531FD           16             DJNZ 31H,NEXT
+001F D530FA           17             DJNZ 30H,NEXT
+0022 D031             18             POP 31H
+0024 D030             19             POP 30H
+0026 DFE9             20             DJNZ R7,D1
+0028 22               21             RET
+                      22     END
+A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 16:15:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+D1 . . . . . . . .  C ADDR   0011H   A   
+DELAY. . . . . . .  C ADDR   000FH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+NEXT . . . . . . .  C ADDR   001CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

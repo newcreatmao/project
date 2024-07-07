@@ -1,0 +1,139 @@
+#include "stdio.h"
+#include "reg52.h"
+
+#define uchar unsigned char 
+#define uint unsigned int
+
+	/* ???? */
+#define D P0	
+sbit E=P2^7;
+sbit RW=P2^5;
+sbit RS=P2^6;
+
+void delay_ms(uchar xms);						/* ???? */
+void LcdWriteCom(uchar com);					/* LCD1602??8?????? */
+void LcdWriteData(uchar dat)	;				/* LCD1602??8?????? */
+void LcdInit();									/* LCD1602?????? */	
+void Show_string1(uchar a[]); 					/* ????????? ??   "" ????????????? */
+void Show_string2(uchar a[]);					/* ???     "" ????????????? */
+void show_string(uchar add,uchar a[]);			/* ????????? ?? ????  0~27   40~67   ???,"?????" */
+void show_number(uchar add,uint a);				/* show_number(0x? ??????,????? */
+void show_float(uchar add,float a);				/* ????? */
+
+void main()
+{
+	LcdInit();							/* LCD1602????? */
+	Show_string1("2200340202");		/* LCD1602??->??? */
+	Show_string2("guyuanyuan");
+	while(1);
+}
+
+/* ???? */
+void delay_ms(uchar xms)
+{
+	uchar i,j;
+	for(i=xms;i>0;i--)
+		for(j=110;j>0;j--);
+}
+
+/* ?1602?????
+ * ??:com ??
+ * ??? : ?
+ */
+void LcdWriteCom(uchar com)
+{
+	E=0;
+	RW=0;
+	RS=0;
+	D=com;
+	delay_ms(5);
+	E=1;
+	delay_ms(5);
+	E=0;
+}
+/* ?1602?????
+ * ??: dat ??
+ * ???: ?
+ */
+void LcdWriteData(uchar dat)
+{
+	E=0;
+	RW=0;
+	RS=1;
+	D=dat;
+	delay_ms(5);
+	E=1;
+	delay_ms(5);
+	E=0;
+}
+
+/* LCD1602?????
+ */
+void LcdInit()
+{
+	LcdWriteCom(0x38);
+	LcdWriteCom(0x0c);
+	LcdWriteCom(0x06);
+	LcdWriteCom(0x01);
+	LcdWriteCom(0x80);
+}
+
+
+/* ?????????
+ * ?? add ?? ??? 0~27
+ *               ??? 40~67
+ *      a[] ??? "abc" 
+ */
+void show_string(uchar add,uchar a[])
+{
+	uchar i;
+	LcdWriteCom(0x80+add);
+	for(i=0;a[i]!='\0';i++)
+	{
+		LcdWriteData(a[i]);
+	}
+}
+
+/* ????????
+ */
+void Show_string1(uchar a[])
+{
+	uchar i;
+	LcdWriteCom(0x80);
+	for(i=0;a[i]!='\0';i++)
+	{
+		LcdWriteData(a[i]);
+	}
+}
+
+/* ????????
+ */
+void Show_string2(uchar a[])
+{
+	uchar i;
+	LcdWriteCom(0x80+0X40);
+	for(i=0;a[i]!='\0';i++)
+	{
+		LcdWriteData(a[i]);
+	}
+}
+
+/* ???????? 
+*/
+void show_number(uchar add,uint a)
+{
+	char s[10];
+	sprintf(s,"%d",a);				
+	show_string(add,(uchar *)s);		/* ???? */
+}
+
+/* ?????????
+*/
+void show_float(uchar add,float a)
+{
+	char s[10];
+	sprintf(s,"% .1f",a);/* ???? */
+	show_string(add,(uchar *)s);
+}
+
+
