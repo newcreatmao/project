@@ -1,8 +1,7 @@
-#encoding:utf-8
 import numpy as np
 import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
-
+#use
 y1 = np.array([100.1262,102.2305,111.2875,299.1899,566.4,774.4])
 x1 = np.array([21,24,27,30,33,36])
 x2 = np.array([400,500,605,605,1032,1486])

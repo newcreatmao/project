@@ -11,7 +11,7 @@ import pandas as pd
 from itertools import product
 import warnings
 warnings.filterwarnings('ignore')
-data = pd.read_csv('python\\11.csv')
+data = pd.read_csv('D:\\project\\python\\11.csv')
 
 plt.figure(figsize=[15, 7.5]); # Set dimensions for figure
 plt.plot(data['timestamp'], data['sales'])
