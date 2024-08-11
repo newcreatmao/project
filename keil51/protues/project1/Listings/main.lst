@@ -1,10 +1,10 @@
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 16:15:34 PAGE     1
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2024 11:39:15 PAGE     1
 
 
-MACRO ASSEMBLER A51 V8.02c
+MACRO ASSEMBLER A51 V8.2.7.0
 OBJECT MODULE PLACED IN .\Objects\main.obj
-ASSEMBLER INVOKED BY: D:\51project\Keil_v5\keil\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJ
-                      ECT(.\Objects\main.obj) EP
+ASSEMBLER INVOKED BY: D:\Users\code-use\keil\use\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OB
+                      JECT(.\Objects\main.obj) EP
 
 LOC  OBJ            LINE     SOURCE
 
@@ -30,7 +30,7 @@ LOC  OBJ            LINE     SOURCE
 0026 DFE9             20             DJNZ R7,D1
 0028 22               21             RET
                       22     END
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 16:15:34 PAGE     2
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2024 11:39:15 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
