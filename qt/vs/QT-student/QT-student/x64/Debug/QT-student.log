@@ -1,5 +1,5 @@
-﻿  uic ui\QTstudent.ui
-  QTstudent.cpp
+﻿  QTstudent.cpp
   main.cpp
   moc_QTstudent.cpp
+  LINK : 没有找到 D:\project\qt\vs\QT-student\x64\Debug\QT-student.exe 或上一个增量链接没有生成它；正在执行完全链接
   QT-student.vcxproj -> D:\project\qt\vs\QT-student\x64\Debug\QT-student.exe

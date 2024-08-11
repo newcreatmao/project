@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\project\\qt\\vs\\QT-student\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\QTstudent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\src\\QTstudent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3806B83F-1B04-427F-A2A0-902D14EB44BC}|QT-student\\QT-student.vcxproj|solutionrelative:QT-student\\ui\\QTstudent.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp",
               "RelativeDocumentMoniker": "QT-student\\src\\main.cpp",
               "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\src\\main.cpp",
               "RelativeToolTip": "QT-student\\src\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-06T09:54:22.765Z",
               "EditorCaption": ""
@@ -56,14 +56,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "QTstudent.ui",
               "DocumentMoniker": "D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui",
               "RelativeDocumentMoniker": "QT-student\\ui\\QTstudent.ui",
               "ToolTip": "D:\\project\\qt\\vs\\QT-student\\QT-student\\ui\\QTstudent.ui",
               "RelativeToolTip": "QT-student\\ui\\QTstudent.ui",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAFAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "Icon": "0d2e443f-6dbb-4001-99dc-9cd7d5c924e7.000006|",
               "WhenOpened": "2024-06-01T03:33:07.803Z",
               "EditorCaption": ""
             }
