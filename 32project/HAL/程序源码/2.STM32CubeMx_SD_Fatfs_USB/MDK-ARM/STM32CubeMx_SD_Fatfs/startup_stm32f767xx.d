@@ -1,1 +1,0 @@
-stm32cubemx_sd_fatfs\startup_stm32f767xx.o: startup_stm32f767xx.s
