@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCInformation.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeRCInformation.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC-C.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC-C.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows.cmake
+D:/Users/APPuse/qt/qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake
+D:/project/cmake/project1/CMakeLists.txt
+D:/project/cmake/project1/build/CMakeFiles/3.27.7/CMakeCCompiler.cmake
+D:/project/cmake/project1/build/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake
+D:/project/cmake/project1/build/CMakeFiles/3.27.7/CMakeRCCompiler.cmake
+D:/project/cmake/project1/build/CMakeFiles/3.27.7/CMakeSystem.cmake
