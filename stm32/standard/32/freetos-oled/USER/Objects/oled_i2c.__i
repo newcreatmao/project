@@ -1,0 +1,4 @@
+--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\FWUB -I ..\FWUB\LIBRARY -I ..\FWUB\STARAT -I ..\MYFUNTIONS -I ..\OBJ -I ..\freertos -I ..\freertos\inc -I ..\freertos\port -I ..\freertos\src
+-ID:\Users\code-use\keil\Pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+-D__UVISION_VERSION="540" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+-o .\objects\oled_i2c.o --omf_browse .\objects\oled_i2c.crf --depend .\objects\oled_i2c.d "OLED_I2C.c"
