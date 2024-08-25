@@ -547,17 +547,17 @@
             <File>
               <FileName>stm32f10x_conf.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\stm32f10x_conf.h</FilePath>
+              <FilePath>..\FWUB\STARAT\stm32f10x_conf.h</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_it.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\stm32f10x_it.c</FilePath>
+              <FilePath>..\FWUB\STARAT\stm32f10x_it.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_it.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\stm32f10x_it.h</FilePath>
+              <FilePath>..\FWUB\STARAT\stm32f10x_it.h</FilePath>
             </File>
           </Files>
         </Group>

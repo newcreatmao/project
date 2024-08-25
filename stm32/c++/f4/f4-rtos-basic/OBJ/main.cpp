@@ -5,9 +5,9 @@ int i=0;
 void task1(void * arg){
 	 while(1){
 		 LED.PIN_HIGH(GPIO_Pin_8);
-		 vTaskDelay(300);
-		 LED.PIN_Low(GPIO_Pin_8);
-		 vTaskDelay(200);
+		 vTaskDelay(500);
+		 LED.PIN_Low(GPIO_Pin_9);
+		 vTaskDelay(500);
 		 
 	 }
 }
@@ -16,7 +16,7 @@ void task2(void * arg){
 	 while(1){
 		 LED.PIN_HIGH(GPIO_Pin_9);
 		 vTaskDelay(500);
-		 LED.PIN_Low(GPIO_Pin_9);
+		 LED.PIN_Low(GPIO_Pin_8);
 		 vTaskDelay(500);
 		 i++;
 		 if(i>5){
