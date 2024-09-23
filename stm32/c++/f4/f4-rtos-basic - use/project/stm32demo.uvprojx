@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\project;..\OBJ;..\MYFUNTIONS\src;..\MYFUNTIONS\inc;..\MYFUNTIONS;..\FWUB\LIBRARY\inc;..\FWUB\LIBRARY\src;..\FWUB\STARAT;..\FWUB;..\freertos\inc;..\freertos\src;..\freertos\port;..\freertos</IncludePath>
+              <IncludePath>..\project;..\OBJ;..\MYFUNTIONS\src;..\MYFUNTIONS\inc;..\MYFUNTIONS;..\FWUB\LIBRARY\inc;..\FWUB\LIBRARY\src;..\FWUB\STARAT;..\FWUB;..\freertos\inc;..\freertos\src;..\freertos\port;..\freertos;..\BASIC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,6 +383,38 @@
       <Groups>
         <Group>
           <GroupName>BASIC</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\BASIC\I2C.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.hpp</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BASIC\I2C.hpp</FilePath>
+            </File>
+            <File>
+              <FileName>IO.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\BASIC\IO.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IO.hpp</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BASIC\IO.hpp</FilePath>
+            </File>
+            <File>
+              <FileName>delay.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\BASIC\delay.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>delay.hpp</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BASIC\delay.hpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>USER</GroupName>

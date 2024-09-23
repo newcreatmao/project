@@ -1,4 +1,7 @@
 --cpu=Cortex-M4.fp.sp
+".\objects\i2c.o"
+".\objects\io.o"
+".\objects\delay.o"
 ".\objects\stm32f4xx_it.o"
 ".\objects\main.o"
 ".\objects\sys.o"

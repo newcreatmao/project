@@ -3,6 +3,10 @@
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "stm32f4xx_gpio.h"
+#include "delay.hpp"
+#include "IO.hpp"
+#include "I2C.hpp"
 
 /********************************************************************/
 #define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
